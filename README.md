@@ -5,7 +5,7 @@
 
 
 ## Usage:
-  rslog ./webserver.log
+  rslog path_to_file_with_log_data
 
   Usage: rslog FILENAME
     -v, --version                    Show version and exit
