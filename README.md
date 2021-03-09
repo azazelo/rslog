@@ -2,73 +2,52 @@
 # Author: Andrey Eremeev
 # ruby-version: 2.6.2
 
-TODO:
+Install:
+> bundle install
 
-Stories:
-1. As a user I want to input in command line 'rslog good.log' 
-  and get output 
-    Visits:
-       /index 2 visits
-       /home 1 visit
-       /about 1 visit
-    List of webpages with most unique page views also ordered
-       /index 1 unique vies
-       /home 1 unique views
-       /about 1 unique views'
-2. As a user I want to input in command line 'rslog --version' 
-  and get output 
-    0.0.1
-3. As a user I want to input in command line 'rslog --help' 
-  and get output 
-    Help message
-4. As a user I want to input in command line 'rslog' 
-  and get output 
-    Help message
-5. As a user I want to input in command line 'rslog empty.log' 
-  and get output 
-    Error: Empty file!
-6. As a user I want to input in command line 'rslog non_text.log' 
-  and get output 
-    Error: Not a text file!
-7. As a user I want to input in command line 'rslog not_valid.log' 
-  and get output same as for (1) and error message
-    Error: Some IPs are NOT valid!
+Usage:
+  rslog ./webserver.log
+
+  Usage: rslog FILENAME
+    -v, --version                    Show version and exit
+    -h, --help                       Prints this message and exit
 
 
 Main Ideas of Design Application:
 
 1. RSlog - main module - run the app
 
+  Container to hold data
+  Container passed to modules to do work
   InputParser -> Extractor -> Validator -> DataParser -> Presenter
 
   InputHandler 
     Parsing input options and args, creates object to hold options and args
+    Validating options and args if they compatible with rules
     to pass to next step
 
+  Extractor
+    Extracts data from file
+
   Validator
-    Validating options and args if they compatible with rules
     If Validator see errors -> it prints error message, 
     if error is fatal -> it exit from application 
 
-  Analyser
-    Count visits and unique views
+  DataParser
+    Parses data in file, calculates counts
 
   Presenter
-    Show the result
+    Format output and prepares it for output
 
-
+  RSlog runs Container.process_all and show output:
+    Report
+    Errors
+    Messages
 
 
 To run app you need to type in commnd line:
-> cd app_folder
-> ./lib/parser webserver.log
+> rslog webserver.log
 
-   - parser - ruby script which will parse given textfile
-   - webserver.log - given textfile:
-        for example it could look like this
-        /home 111.222.222.222
-        /about 111.222.222.222
-        /about/2 111.222.222.222
 
 # Output:
   List of webpages with most page views ordered from most pages views to less page views

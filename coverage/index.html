@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-09T18:55:13+04:00">2021-03-09T18:55:13+04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-09T19:39:33+04:00">2021-03-09T19:39:33+04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -249,7 +249,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f5649277d33825c652fbb283e12ebb3043fd48fe" class="src_link" title="spec/rslog_spec.rb">spec/rslog_spec.rb</a></td>
             <td class="red strong cell--number t-file__coverage">71.43 %</td>
-            <td class="cell--number">44</td>
+            <td class="cell--number">75</td>
             <td class="cell--number">21</td>
             <td class="cell--number">15</td>
             <td class="cell--number">6</td>
@@ -6946,13 +6946,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="3">
+            
             
 
             
 
-            <code class="ruby">require &#39;spec_helper&#39;</code>
+            <code class="ruby">&lt;&lt;EOF</code>
           </li>
         </div>
       
@@ -6963,51 +6963,51 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"> 1. As a user I want to input in command line &#39;rslog good.log&#39; </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="5">
+            
             
 
             
 
-            <code class="ruby">describe RSlog do</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="6">
+            
             
 
             
 
-            <code class="ruby">  context &#39;integration&#39; do</code>
+            <code class="ruby">    Visits:</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="7">
+            
             
 
             
 
-            <code class="ruby">    it &#39;print version&#39; do</code>
+            <code class="ruby">       /index 2 visits</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
-            <code class="ruby">      expect { system %(./bin/rslog --version) }</code>
+            <code class="ruby">       /home 1 visit</code>
           </li>
         </div>
       
@@ -7018,7 +7018,7 @@
 
             
 
-            <code class="ruby">        .to output(a_string_including(&#39;0.0.1&#39;))</code>
+            <code class="ruby">       /about 1 visit</code>
           </li>
         </div>
       
@@ -7029,7 +7029,7 @@
 
             
 
-            <code class="ruby">        .to_stdout_from_any_process</code>
+            <code class="ruby">    List of webpages with most unique page views also ordered</code>
           </li>
         </div>
       
@@ -7040,29 +7040,29 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">       /index 1 unique vies</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="12">
+            
             
 
             
 
-            <code class="ruby">    it &#39;print usage information&#39; do</code>
+            <code class="ruby">       /home 1 unique views</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
             
 
-            <code class="ruby">      expect { system %(./bin/rslog --help) }</code>
+            <code class="ruby">       /about 1 unique views&#39;</code>
           </li>
         </div>
       
@@ -7073,7 +7073,7 @@
 
             
 
-            <code class="ruby">        .to output(a_string_including(&#39;Usage&#39;))</code>
+            <code class="ruby"> 2. As a user I want to input in command line &#39;rslog --version&#39; </code>
           </li>
         </div>
       
@@ -7084,7 +7084,7 @@
 
             
 
-            <code class="ruby">        .to_stdout_from_any_process</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
@@ -7095,29 +7095,29 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    0.0.1</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="17">
+            
             
 
             
 
-            <code class="ruby">    it &#39;Prints message some IPs are NOT valid&#39; do</code>
+            <code class="ruby"> 3. As a user I want to input in command line &#39;rslog --help&#39; </code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
             
 
-            <code class="ruby">      expect { system %(./bin/rslog ./spec/fixtures/files/bad.log) }</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
@@ -7128,7 +7128,7 @@
 
             
 
-            <code class="ruby">        .to output(a_string_including(&#39;Some IPs are NOT valid&#39;))</code>
+            <code class="ruby">    Help message</code>
           </li>
         </div>
       
@@ -7139,7 +7139,7 @@
 
             
 
-            <code class="ruby">        .to_stdout_from_any_process</code>
+            <code class="ruby"> 4. As a user I want to input in command line &#39;rslog&#39; </code>
           </li>
         </div>
       
@@ -7150,29 +7150,29 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="22">
+            
             
 
             
 
-            <code class="ruby">    it &#39;pring stat from file&#39; do</code>
+            <code class="ruby">    Help message</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="23">
+          <li class="never" data-hits="" data-linenumber="23">
             
             
 
             
 
-            <code class="ruby">      expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }</code>
+            <code class="ruby"> 5. As a user I want to input in command line &#39;rslog empty.log&#39; </code>
           </li>
         </div>
       
@@ -7183,7 +7183,7 @@
 
             
 
-            <code class="ruby">        .to output(a_string_including(&#39;index&#39;))</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
@@ -7194,7 +7194,7 @@
 
             
 
-            <code class="ruby">        .to_stdout_from_any_process</code>
+            <code class="ruby">    Error: Empty file!</code>
           </li>
         </div>
       
@@ -7205,7 +7205,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"> 6. As a user I want to input in command line &#39;rslog non_text.log&#39; </code>
           </li>
         </div>
       
@@ -7216,7 +7216,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">  and get output </code>
           </li>
         </div>
       
@@ -7227,7 +7227,7 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">    Error: Not a text file!</code>
           </li>
         </div>
       
@@ -7238,51 +7238,51 @@
 
             
 
+            <code class="ruby"> 7. As a user I want to input in command line &#39;rslog not_valid.log&#39; </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">  and get output same as for (1) and error message</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">    Error: Some IPs are NOT valid!</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">EOF</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">describe RSlog do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="31">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  context &#39;create appropriate objects&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    let(:container) { build(:container_with_data) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="33">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it(&#39;creates Container&#39;) { expect(container).to be_instance_of(Container) }</code>
           </li>
         </div>
       
@@ -7293,56 +7293,12 @@
 
             
 
-            <code class="ruby">    ARGV &lt;&lt; &#39;./spec/fixtures/files/good.log&#39;</code>
+            <code class="ruby">require &#39;spec_helper&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    it(&#39;run&#39;) {</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby">    }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="38">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    ARGV.pop</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -7353,24 +7309,68 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
+          <li class="covered" data-hits="1" data-linenumber="36">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    it &#39;process_all&#39; do</code>
+            <code class="ruby">describe RSlog do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="37">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;integration&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;print version&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="39">
             
             
 
             
 
-            <code class="ruby">      expect { Container.new.process_all }.to output(/No file/).to_stdout_from_any_process</code>
+            <code class="ruby">      expect { system %(./bin/rslog --version) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">        .to output(a_string_including(&#39;0.0.1&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby">        .to_stdout_from_any_process</code>
           </li>
         </div>
       
@@ -7386,7 +7386,172 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;print usage information&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby">      expect { system %(./bin/rslog --help) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">        .to output(a_string_including(&#39;Usage&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">        .to_stdout_from_any_process</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;Prints message some IPs are NOT valid&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">      expect { system %(./bin/rslog ./spec/fixtures/files/bad.log) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby">        .to output(a_string_including(&#39;Some IPs are NOT valid&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">        .to_stdout_from_any_process</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;pring stat from file&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="54">
+            
+            
+
+            
+
+            <code class="ruby">      expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby">        .to output(a_string_including(&#39;index&#39;))</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
+            
+            
+
+            
+
+            <code class="ruby">        .to_stdout_from_any_process</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="57">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -7397,7 +7562,183 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="59">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">describe RSlog do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;create appropriate objects&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="63">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    let(:container) { build(:container_with_data) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it(&#39;creates Container&#39;) { expect(container).to be_instance_of(Container) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    ARGV &lt;&lt; &#39;./spec/fixtures/files/good.log&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it(&#39;run&#39;) {</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    ARGV.pop</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="71">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;process_all&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">      expect { Container.new.process_all }.to output(/No file/).to_stdout_from_any_process</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
             
             
 
