@@ -16,27 +16,27 @@
 
 ### 1. RSlog - main module - run the app
 
-  Container to hold data
-  Container passed to modules to do work
-  InputParser -> Extractor -> Validator -> DataParser -> Presenter
+  Container to hold data  
+  Container passed to modules to do work  
+  InputParser -> Extractor -> Validator -> DataParser -> Presenter  
 
 ####  InputHandler 
-    Parsing input options and args, creates object to hold options and args
-    Validating options and args if they compatible with rules
-    to pass to next step
+  Parsing input options and args, creates object to hold options and args
+  Validating options and args if they compatible with rules
+  to pass to next step
 
 ####  Extractor
-    Extracts data from file
+  Extracts data from file
 
 ####  Validator
-    If Validator see errors -> it prints error message, 
-    if error is fatal -> it exit from application 
+  If Validator see errors -> it prints error message, 
+  if error is fatal -> it exit from application 
 
 ####  DataParser
-    Parses data in file, calculates counts
+  Parses data in file, calculates counts
 
 ####  Presenter
-    Format output and prepares it for output
+  Format output and prepares it for output
 
 ####  RSlog 
   Runs Container.process_all and show output:
