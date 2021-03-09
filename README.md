@@ -1,11 +1,10 @@
 # rslog is ruby gem to analyze webserver.log to find out page views metrics
-# Author: Andrey Eremeev
-# ruby-version: 2.6.2
+## Author: Andrey Eremeev
+## ruby-version: 2.6.2
 
-Install:
-> bundle install
 
-Usage:
+
+## Usage:
   rslog ./webserver.log
 
   Usage: rslog FILENAME
@@ -13,54 +12,59 @@ Usage:
     -h, --help                       Prints this message and exit
 
 
-Main Ideas of Design Application:
+## Main Ideas of Design Application:
 
-1. RSlog - main module - run the app
+### 1. RSlog - main module - run the app
 
   Container to hold data
   Container passed to modules to do work
   InputParser -> Extractor -> Validator -> DataParser -> Presenter
 
-  InputHandler 
+####  InputHandler 
     Parsing input options and args, creates object to hold options and args
     Validating options and args if they compatible with rules
     to pass to next step
 
-  Extractor
+####  Extractor
     Extracts data from file
 
-  Validator
+####  Validator
     If Validator see errors -> it prints error message, 
     if error is fatal -> it exit from application 
 
-  DataParser
+####  DataParser
     Parses data in file, calculates counts
 
-  Presenter
+####  Presenter
     Format output and prepares it for output
 
-  RSlog runs Container.process_all and show output:
+####  RSlog 
+  Runs Container.process_all and show output:
     Report
     Errors
     Messages
 
 
-To run app you need to type in commnd line:
+## To run app you need to type in commnd line:
 > rslog webserver.log
 
 
-# Output:
+## Output:
   List of webpages with most page views ordered from most pages views to less page views
   List list of webpages with most unique page views also ordered
 
 
-# Installation
+## Installation
+### without bundler
+> gem install rslog
+### with bundler
+put 'gem rslog' to Gemfile
 > bundle install
 
-# To test run
+## To test run
 > rspec
 
-# To check syntax run
+## To check syntax run
 > rubocop
 
 
@@ -71,6 +75,9 @@ To run app you need to type in commnd line:
 
 2. Make possible to analyse more metrics, for example what time most visited, 
    if webserver.log will include timestamp
- 
+
+3. Separate functionality of DECORATORS from Presenter 
+
+4. Separate functionality of OPTS from InputParser 
 
 
