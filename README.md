@@ -51,16 +51,16 @@
 
 ## Installation
 ### without bundler
->> gem install rslog
+> gem install rslog
 ### with bundler
 put 'gem rslog' to Gemfile
->> bundle install
+> bundle install
 
 ## To test run
->> rspec
+> rspec
 
 ## To check syntax run
->> rubocop
+> rubocop
 
 
 # Future possible work:
