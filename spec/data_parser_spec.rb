@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'pathname'
-require 'pry'
 
 describe DataParser do
   let(:visits_count) do
