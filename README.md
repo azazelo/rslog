@@ -44,11 +44,6 @@
     Errors
     Messages
 
-
-## To run app you need to type in commnd line:
-> rslog webserver.log
-
-
 ## Output:
   List of webpages with most page views ordered from most pages views to less page views
   List list of webpages with most unique page views also ordered
@@ -56,16 +51,16 @@
 
 ## Installation
 ### without bundler
-> gem install rslog
+>> gem install rslog
 ### with bundler
 put 'gem rslog' to Gemfile
-> bundle install
+>> bundle install
 
 ## To test run
-> rspec
+>> rspec
 
 ## To check syntax run
-> rubocop
+>> rubocop
 
 
 # Future possible work:
