@@ -6,6 +6,8 @@ require_relative 'validator'
 
 require 'pry'
 
+# Class to parse data from given array
+#
 class DataParser
   # type = :count (default) -> just count in groups
   # type = :uniq -> uniq entries in groups
@@ -17,11 +19,11 @@ class DataParser
     @container.result =
       @container.data
                 .group_by_index(0)
-                .count_by_groups(type)
+                .send("count_by_groups_#{type.to_s}")
                 .to_a
                 .sort_by { |item| item[1] }
                 .reverse
-                .map { |i| i.map(&:to_s).join(' ') }
+                .map { |elem_arr| elem_arr.map(&:to_s).join(' ') }
     self
   end
 end

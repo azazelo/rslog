@@ -3,6 +3,8 @@
 require_relative 'tools/hash'
 require_relative 'tools/array'
 
+# Class to present result in needed format
+#
 class Presenter
   DECORATORS = {
     all:  {
@@ -21,21 +23,33 @@ class Presenter
   end
 
   def execute(type, formatter)
-    @container.messages << format_as(type, formatter)
+    @type = type
+    @container.messages << send("format_as_#{formatter}")
     self
   end
 
   private
 
-  def format_as(type, formatter)
-    case formatter
-    when :text
-      [
-        DECORATORS[type][:title],
-        @container.result.to_multiline_string(DECORATORS[type][:suffix]),
-        separator
-      ].join("\n")
-    end
+  attr_reader :title, :suffix
+  
+  def title
+    decorator[:title]
+  end
+  
+  def suffix
+    decorator[:suffix]
+  end
+  
+  def decorator
+    DECORATORS[@type]
+  end
+  
+  def format_as_text
+    [
+      title,
+      @container.result.to_multiline_string(suffix),
+      separator
+    ].join("\n")
   end
 
   def separator

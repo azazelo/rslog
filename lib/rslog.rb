@@ -12,7 +12,7 @@ require_relative 'rslog/presenter'
 # require 'pry'
 
 class RSlog
-  VERSION = '0.0.1'
+  VERSION = '0.0.4'
 
   def self.run
     Container.new.process_all

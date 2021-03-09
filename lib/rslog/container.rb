@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Class to hold data and implement processing
+
 class Container
   attr_accessor(*%i[
                   argv file_name messages errors data options validator types result
@@ -22,6 +24,14 @@ class Container
 
   def no_errors?
     errors.empty?
+  end
+  
+  def add_message(str)
+    self.messages << str
+  end
+
+  def add_error(str)
+    self.errors << str
   end
 
   def talk

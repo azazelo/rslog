@@ -2,6 +2,8 @@
 
 require_relative 'tools/array'
 
+# Class to validate if we have valid data in lines, for example well formatted IPs
+#
 class Validator
   TEMPLATES = {
     # IP address regex, source https://regexr.com/38odc

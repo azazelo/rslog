@@ -2,9 +2,12 @@
 
 require_relative 'container'
 
+# Class for extracting data from file
+#
 class Extractor
   def initialize(container)
     @container = container
+    @file_name = container.file_name
   end
 
   def execute
@@ -15,13 +18,13 @@ class Extractor
   private
 
   def check
-    if File.zero?(@container.file_name)
-      @container.messages << 'Empty file'
+    if File.zero?(@file_name)
+      @container.add_message 'Empty file'
     else
-      @container.data = File.open(@container.file_name, 'r').to_a
-      @container.messages << 'Data in place'
+      @container.data = File.open(@file_name, 'r').to_a
+      @container.add_message 'Data in place'
     end
-  rescue StandardError => e
-    @container.errors << e
+  rescue StandardError => error
+    @container.add_error error
   end
 end

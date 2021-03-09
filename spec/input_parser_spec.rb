@@ -17,14 +17,14 @@ describe InputParser do
     expect(container).to have_attributes(file_name: 'server.log')
   end
 
-  it 'creates OPTS[:version][:action]' do
-    expect { InputParser::OPTS[:version][:action].call }
+  it 'creates version action' do
+    expect { Opts::VERSION[:action].call }
       .to output(Regexp.new(RSlog::VERSION))
       .to_stdout_from_any_process
   end
 
-  it 'creates OPTS[:help][:action]' do
-    expect { InputParser::OPTS[:help][:action].call('help') }
+  it 'creates help action' do
+    expect { Opts::HELP[:action].call('help') }
       .to output(/help/).to_stdout_from_any_process
   end
 
