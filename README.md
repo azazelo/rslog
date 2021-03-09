@@ -1,4 +1,4 @@
-# rslog is ruby gem to analyze webserver.log to find out page views metrics
+# **rslog** is a ruby gem to analyze webserver.log to find out page views metrics
 ## Author: Andrey Eremeev
 ## ruby-version: 2.6.2
 
