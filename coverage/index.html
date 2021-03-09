@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-09T22:40:52+04:00">2021-03-09T22:40:52+04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-09T22:56:16+04:00">2021-03-09T22:56:16+04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  91.5%
+  91.74%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.13
+         2.14
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>341</b> relevant lines,
-    <span class="green"><b>312</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed. </span>
+    <b>339</b> relevant lines,
+    <span class="green"><b>311</b> lines covered</span> and
+    <span class="red"><b>28</b> lines missed. </span>
     (<span class="green">
-  91.5%
+  91.74%
 </span>
 )
   </div>
@@ -116,12 +116,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#10c4e36aebf1c7f1c7bf6dde3162f90c83f07bf8" class="src_link" title="lib/rslog/input_parser.rb">lib/rslog/input_parser.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">94.74 %</td>
-            <td class="cell--number">36</td>
-            <td class="cell--number">19</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">35</td>
             <td class="cell--number">18</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1.89</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">2.00</td>
             
           </tr>
         
@@ -139,11 +139,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf75d44a6c53f63bdb700dceeb58a042285dd08d" class="src_link" title="lib/rslog/presenter.rb">lib/rslog/presenter.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">58</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">22</td>
+            <td class="cell--number">56</td>
+            <td class="cell--number">21</td>
+            <td class="cell--number">21</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.55</td>
+            <td class="cell--number">1.57</td>
             
           </tr>
         
@@ -260,7 +260,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f5649277d33825c652fbb283e12ebb3043fd48fe" class="src_link" title="spec/rslog_spec.rb">spec/rslog_spec.rb</a></td>
             <td class="red strong cell--number t-file__coverage">71.43 %</td>
-            <td class="cell--number">81</td>
+            <td class="cell--number">68</td>
             <td class="cell--number">21</td>
             <td class="cell--number">15</td>
             <td class="cell--number">6</td>
@@ -932,7 +932,7 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -954,7 +954,7 @@
 
             
 
-            <code class="ruby">    self.messages &lt;&lt; str</code>
+            <code class="ruby">    messages &lt;&lt; str</code>
           </li>
         </div>
       
@@ -998,7 +998,7 @@
 
             
 
-            <code class="ruby">    self.errors &lt;&lt; str</code>
+            <code class="ruby">    errors &lt;&lt; str</code>
           </li>
         </div>
       
@@ -1535,7 +1535,7 @@
 
             
 
-            <code class="ruby">                .send(&quot;count_by_groups_#{type.to_s}&quot;)</code>
+            <code class="ruby">                .send(&quot;count_by_groups_#{type}&quot;)</code>
           </li>
         </div>
       
@@ -1940,7 +1940,7 @@
 
             
 
-            <code class="ruby">  rescue StandardError =&gt; error</code>
+            <code class="ruby">  rescue StandardError =&gt; e</code>
           </li>
         </div>
       
@@ -1951,7 +1951,7 @@
 
             
 
-            <code class="ruby">    @container.add_error error</code>
+            <code class="ruby">    @container.add_error e</code>
           </li>
         </div>
       
@@ -1987,7 +1987,7 @@
     <h3>lib/rslog/input_parser.rb</h3>
     <h4>
       <span class="green">
-  94.74%
+  100.0%
 </span>
 
       lines covered
@@ -1996,9 +1996,9 @@
     
 
     <div class="t-line-summary">
-      <b>19</b> relevant lines.
+      <b>18</b> relevant lines.
       <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -2312,18 +2312,18 @@
 
             
 
-            <code class="ruby">  rescue OptionParser::InvalidOption =&gt; error</code>
+            <code class="ruby">  rescue OptionParser::InvalidOption =&gt; @container.add_error</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="29">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
             
 
-            <code class="ruby">    @container.add_error &lt;&lt; error</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2334,23 +2334,12 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="32">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
@@ -2361,7 +2350,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="33">
+          <li class="covered" data-hits="4" data-linenumber="32">
             <span class="hits">4</span>
             
 
@@ -2372,7 +2361,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="34">
+          <li class="covered" data-hits="3" data-linenumber="33">
             <span class="hits">3</span>
             
 
@@ -2383,7 +2372,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="35">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -2394,7 +2383,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="36">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -2773,8 +2762,8 @@
     
 
     <div class="t-line-summary">
-      <b>22</b> relevant lines.
-      <span class="green"><b>22</b> lines covered</span> and
+      <b>21</b> relevant lines.
+      <span class="green"><b>21</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3144,34 +3133,12 @@
 
             
 
-            <code class="ruby">  attr_reader :title, :suffix</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">  def title</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="36">
+          <li class="covered" data-hits="2" data-linenumber="34">
             <span class="hits">2</span>
             
 
@@ -3182,7 +3149,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -3193,183 +3160,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def suffix</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    decorator[:suffix]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def decorator</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="4" data-linenumber="44">
-            <span class="hits">4</span>
-            
-
-            
-
-            <code class="ruby">    DECORATORS[@type]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
-            
-
-            <code class="ruby">  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="47">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def format_as_text</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
-            
-
-            <code class="ruby">    [</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="49">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      title,</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
-            
-
-            <code class="ruby">      @container.result.to_multiline_string(suffix),</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
-            
-
-            <code class="ruby">      separator</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
-            
-
-            <code class="ruby">    ].join(&quot;\n&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="53">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -3380,29 +3171,29 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="55">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def separator</code>
+            <code class="ruby">  def suffix</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="56">
+          <li class="covered" data-hits="2" data-linenumber="38">
             <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">    &#39;-----------------------------&#39;</code>
+            <code class="ruby">    decorator[:suffix]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -3413,7 +3204,183 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def decorator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="4" data-linenumber="42">
+            <span class="hits">4</span>
+            
+
+            
+
+            <code class="ruby">    DECORATORS[@type]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def format_as_text</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">    [</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="47">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      title,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby">      @container.result.to_multiline_string(suffix),</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">      separator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby">    ].join(&quot;\n&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="53">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def separator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="54">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    &#39;-----------------------------&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -3483,7 +3450,7 @@
 
             
 
-            <code class="ruby"># Monkey patch for Array class </code>
+            <code class="ruby"># Monkey patch for Array class</code>
           </li>
         </div>
       
@@ -3494,7 +3461,7 @@
 
             
 
-            <code class="ruby">#  </code>
+            <code class="ruby">#</code>
           </li>
         </div>
       
@@ -3571,7 +3538,7 @@
 
             
 
-            <code class="ruby">    self.map {|item| &quot;#{item} #{suffix}&quot;}.join(&quot;\n&quot;)</code>
+            <code class="ruby">    map { |item| &quot;#{item} #{suffix}&quot; }.join(&quot;\n&quot;)</code>
           </li>
         </div>
       
@@ -7412,7 +7379,7 @@
 
             
 
-            <code class="ruby">&lt;&lt;EOF</code>
+            <code class="ruby"># 1. As a user I want to input in command line &#39;rslog good.log&#39; and get output#{&#39; &#39;}</code>
           </li>
         </div>
       
@@ -7423,7 +7390,7 @@
 
             
 
-            <code class="ruby"> 1. As a user I want to input in command line &#39;rslog good.log&#39; and get output </code>
+            <code class="ruby">#    Visits:</code>
           </li>
         </div>
       
@@ -7434,7 +7401,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#       /index 2 visits</code>
           </li>
         </div>
       
@@ -7445,7 +7412,7 @@
 
             
 
-            <code class="ruby">    Visits:</code>
+            <code class="ruby">#       /home 1 visit</code>
           </li>
         </div>
       
@@ -7456,7 +7423,7 @@
 
             
 
-            <code class="ruby">       /index 2 visits</code>
+            <code class="ruby">#       /about 1 visit</code>
           </li>
         </div>
       
@@ -7467,7 +7434,7 @@
 
             
 
-            <code class="ruby">       /home 1 visit</code>
+            <code class="ruby">#    List of webpages with most unique page views also ordered</code>
           </li>
         </div>
       
@@ -7478,7 +7445,7 @@
 
             
 
-            <code class="ruby">       /about 1 visit</code>
+            <code class="ruby">#       /index 1 unique vies</code>
           </li>
         </div>
       
@@ -7489,7 +7456,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#       /home 1 unique views</code>
           </li>
         </div>
       
@@ -7500,7 +7467,7 @@
 
             
 
-            <code class="ruby">    List of webpages with most unique page views also ordered</code>
+            <code class="ruby">#       /about 1 unique views&#39;</code>
           </li>
         </div>
       
@@ -7511,7 +7478,7 @@
 
             
 
-            <code class="ruby">       /index 1 unique vies</code>
+            <code class="ruby"># 2. As a user I want to input in command line &#39;rslog --version&#39; and get output#{&#39; &#39;}</code>
           </li>
         </div>
       
@@ -7522,7 +7489,7 @@
 
             
 
-            <code class="ruby">       /home 1 unique views</code>
+            <code class="ruby">#    0.0.1</code>
           </li>
         </div>
       
@@ -7533,7 +7500,7 @@
 
             
 
-            <code class="ruby">       /about 1 unique views&#39;</code>
+            <code class="ruby"># 3. As a user I want to input in command line &#39;rslog --help&#39; and get output#{&#39; &#39;}</code>
           </li>
         </div>
       
@@ -7544,7 +7511,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#  Usage: rslog FILENAME</code>
           </li>
         </div>
       
@@ -7555,7 +7522,7 @@
 
             
 
-            <code class="ruby"> 2. As a user I want to input in command line &#39;rslog --version&#39; and get output </code>
+            <code class="ruby">#    -v, --version                    Show version and exit</code>
           </li>
         </div>
       
@@ -7566,7 +7533,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#    -h, --help                       Prints this message and exit</code>
           </li>
         </div>
       
@@ -7577,7 +7544,7 @@
 
             
 
-            <code class="ruby">    0.0.1</code>
+            <code class="ruby"># 5. As a user I want to input in command line &#39;rslog empty.log&#39; and get output#{&#39; &#39;}</code>
           </li>
         </div>
       
@@ -7588,7 +7555,7 @@
 
             
 
-            <code class="ruby"> 3. As a user I want to input in command line &#39;rslog --help&#39; and get output </code>
+            <code class="ruby">#    Empty file!</code>
           </li>
         </div>
       
@@ -7599,7 +7566,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby"># 6. As a user I want to input in command line &#39;rslog non_text.log&#39; and get output#{&#39; &#39;}</code>
           </li>
         </div>
       
@@ -7610,7 +7577,7 @@
 
             
 
-            <code class="ruby">  Usage: rslog FILENAME</code>
+            <code class="ruby">#    (not yet)</code>
           </li>
         </div>
       
@@ -7621,7 +7588,7 @@
 
             
 
-            <code class="ruby">    -v, --version                    Show version and exit</code>
+            <code class="ruby">#    Not a text file!</code>
           </li>
         </div>
       
@@ -7632,7 +7599,7 @@
 
             
 
-            <code class="ruby">    -h, --help                       Prints this message and exit</code>
+            <code class="ruby"># 7. As a user I want to input in command line &#39;rslog not_valid.log&#39;</code>
           </li>
         </div>
       
@@ -7643,7 +7610,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#    and get output same as for (1) and error message</code>
           </li>
         </div>
       
@@ -7654,7 +7621,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">#    Some IPs are NOT valid!</code>
           </li>
         </div>
       
@@ -7665,155 +7632,12 @@
 
             
 
-            <code class="ruby"> 5. As a user I want to input in command line &#39;rslog empty.log&#39; and get output </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">    Empty file!</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="29">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
-            
-            
-
-            
-
-            <code class="ruby"> 6. As a user I want to input in command line &#39;rslog non_text.log&#39; and get output </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
-            
-
-            <code class="ruby">    (not yet)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">    Not a text file!</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
-            
-            
-
-            
-
-            <code class="ruby"> 7. As a user I want to input in command line &#39;rslog not_valid.log&#39; and get output same as for (1)       and error message</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="35">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="36">
-            
-            
-
-            
-
-            <code class="ruby">    Some IPs are NOT valid!</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="37">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
-            <code class="ruby">EOF</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
+          <li class="covered" data-hits="1" data-linenumber="27">
             <span class="hits">1</span>
             
 
@@ -7824,7 +7648,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="28">
             
             
 
@@ -7835,7 +7659,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="29">
             <span class="hits">1</span>
             
 
@@ -7846,7 +7670,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="30">
             <span class="hits">1</span>
             
 
@@ -7857,7 +7681,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
+          <li class="covered" data-hits="1" data-linenumber="31">
             <span class="hits">1</span>
             
 
@@ -7868,7 +7692,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="45">
+          <li class="missed" data-hits="0" data-linenumber="32">
             
             
 
@@ -7879,7 +7703,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="33">
             
             
 
@@ -7890,7 +7714,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -7901,7 +7725,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -7912,7 +7736,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="49">
+          <li class="covered" data-hits="1" data-linenumber="36">
             <span class="hits">1</span>
             
 
@@ -7923,7 +7747,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="50">
+          <li class="missed" data-hits="0" data-linenumber="37">
             
             
 
@@ -7934,7 +7758,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="38">
             
             
 
@@ -7945,7 +7769,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -7956,7 +7780,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="never" data-hits="" data-linenumber="40">
             
             
 
@@ -7967,7 +7791,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="41">
             <span class="hits">1</span>
             
 
@@ -7978,7 +7802,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="55">
+          <li class="missed" data-hits="0" data-linenumber="42">
             
             
 
@@ -7989,7 +7813,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -8000,7 +7824,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -8011,7 +7835,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -8022,7 +7846,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
+          <li class="covered" data-hits="1" data-linenumber="46">
             <span class="hits">1</span>
             
 
@@ -8033,7 +7857,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="60">
+          <li class="missed" data-hits="0" data-linenumber="47">
             
             
 
@@ -8044,7 +7868,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -8055,7 +7879,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="62">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -8066,7 +7890,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -8077,7 +7901,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
@@ -8088,7 +7912,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -8099,7 +7923,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -8110,7 +7934,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
+          <li class="covered" data-hits="1" data-linenumber="54">
             <span class="hits">1</span>
             
 
@@ -8121,7 +7945,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="68">
+          <li class="covered" data-hits="1" data-linenumber="55">
             <span class="hits">1</span>
             
 
@@ -8132,7 +7956,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="69">
+          <li class="covered" data-hits="1" data-linenumber="56">
             <span class="hits">1</span>
             
 
@@ -8143,7 +7967,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="70">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -8154,7 +7978,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="71">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
@@ -8165,7 +7989,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="72">
+          <li class="covered" data-hits="1" data-linenumber="59">
             <span class="hits">1</span>
             
 
@@ -8176,7 +8000,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="73">
+          <li class="missed" data-hits="0" data-linenumber="60">
             
             
 
@@ -8187,7 +8011,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="74">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -8198,7 +8022,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="75">
+          <li class="covered" data-hits="1" data-linenumber="62">
             <span class="hits">1</span>
             
 
@@ -8209,7 +8033,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="76">
+          <li class="never" data-hits="" data-linenumber="63">
             
             
 
@@ -8220,7 +8044,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="77">
+          <li class="covered" data-hits="1" data-linenumber="64">
             <span class="hits">1</span>
             
 
@@ -8231,7 +8055,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="78">
+          <li class="missed" data-hits="0" data-linenumber="65">
             
             
 
@@ -8242,7 +8066,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="79">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -8253,7 +8077,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="80">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
@@ -8264,7 +8088,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="81">
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 

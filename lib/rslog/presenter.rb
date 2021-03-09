@@ -30,20 +30,18 @@ class Presenter
 
   private
 
-  attr_reader :title, :suffix
-  
   def title
     decorator[:title]
   end
-  
+
   def suffix
     decorator[:suffix]
   end
-  
+
   def decorator
     DECORATORS[@type]
   end
-  
+
   def format_as_text
     [
       title,

@@ -25,8 +25,8 @@ class InputParser
 
   def handle_opts
     @opts.parse!(into: @container.options)
-  rescue OptionParser::InvalidOption => error
-    @container.add_error << error
+  rescue OptionParser::InvalidOption => e
+    @container.add_error << e
   end
 
   def handle_args

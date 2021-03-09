@@ -24,7 +24,7 @@ class Extractor
       @container.data = File.open(@file_name, 'r').to_a
       @container.add_message 'Data in place'
     end
-  rescue StandardError => error
-    @container.add_error error
+  rescue StandardError => e
+    @container.add_error e
   end
 end

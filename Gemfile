@@ -9,10 +9,10 @@ group :development, :test do
   gem 'fuubar'
   gem 'pry', '~> 0.13.1'
   gem 'rack-test'
+  gem 'reek'
   gem 'rspec'
   gem 'rubocop'
   gem 'simplecov'
-  gem 'reek'
 end
 
 gem 'coderay'

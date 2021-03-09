@@ -19,7 +19,7 @@ class DataParser
     @container.result =
       @container.data
                 .group_by_index(0)
-                .send("count_by_groups_#{type.to_s}")
+                .send("count_by_groups_#{type}")
                 .to_a
                 .sort_by { |item| item[1] }
                 .reverse

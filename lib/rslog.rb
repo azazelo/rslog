@@ -13,7 +13,7 @@ require_relative 'rslog/opts'
 # require 'pry'
 
 class RSlog
-  VERSION = '0.0.6'
+  VERSION = '0.0.7'
 
   def self.run
     Container.new.process_all

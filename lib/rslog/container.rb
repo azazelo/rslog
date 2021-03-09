@@ -25,13 +25,13 @@ class Container
   def no_errors?
     errors.empty?
   end
-  
+
   def add_message(str)
-    self.messages << str
+    messages << str
   end
 
   def add_error(str)
-    self.errors << str
+    errors << str
   end
 
   def talk

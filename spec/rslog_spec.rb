@@ -1,41 +1,28 @@
 # frozen_string_literal: true
 
-<<EOF
- 1. As a user I want to input in command line 'rslog good.log' and get output 
-
-    Visits:
-       /index 2 visits
-       /home 1 visit
-       /about 1 visit
-
-    List of webpages with most unique page views also ordered
-       /index 1 unique vies
-       /home 1 unique views
-       /about 1 unique views'
-
- 2. As a user I want to input in command line 'rslog --version' and get output 
-
-    0.0.1
- 3. As a user I want to input in command line 'rslog --help' and get output 
-
-  Usage: rslog FILENAME
-    -v, --version                    Show version and exit
-    -h, --help                       Prints this message and exit
-
-
- 5. As a user I want to input in command line 'rslog empty.log' and get output 
-    
-    Empty file!
-
- 6. As a user I want to input in command line 'rslog non_text.log' and get output 
-    (not yet)
-    Not a text file!
-
- 7. As a user I want to input in command line 'rslog not_valid.log' and get output same as for (1)       and error message
-    
-    Some IPs are NOT valid!
-
-EOF
+# 1. As a user I want to input in command line 'rslog good.log' and get output#{' '}
+#    Visits:
+#       /index 2 visits
+#       /home 1 visit
+#       /about 1 visit
+#    List of webpages with most unique page views also ordered
+#       /index 1 unique vies
+#       /home 1 unique views
+#       /about 1 unique views'
+# 2. As a user I want to input in command line 'rslog --version' and get output#{' '}
+#    0.0.1
+# 3. As a user I want to input in command line 'rslog --help' and get output#{' '}
+#  Usage: rslog FILENAME
+#    -v, --version                    Show version and exit
+#    -h, --help                       Prints this message and exit
+# 5. As a user I want to input in command line 'rslog empty.log' and get output#{' '}
+#    Empty file!
+# 6. As a user I want to input in command line 'rslog non_text.log' and get output#{' '}
+#    (not yet)
+#    Not a text file!
+# 7. As a user I want to input in command line 'rslog not_valid.log'
+#    and get output same as for (1) and error message
+#    Some IPs are NOT valid!
 
 require 'spec_helper'
 
