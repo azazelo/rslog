@@ -1,0 +1,44 @@
+# frozen_string_literal: true
+
+require 'spec_helper'
+
+describe RSlog do
+  context 'integration' do
+    it 'print version' do
+      expect { system %(./bin/rslog --version) }
+        .to output(a_string_including('0.0.1'))
+        .to_stdout_from_any_process
+    end
+    it 'print usage information' do
+      expect { system %(./bin/rslog --help) }
+        .to output(a_string_including('Usage'))
+        .to_stdout_from_any_process
+    end
+    it 'Prints message some IPs are NOT valid' do
+      expect { system %(./bin/rslog ./spec/fixtures/files/bad.log) }
+        .to output(a_string_including('Some IPs are NOT valid'))
+        .to_stdout_from_any_process
+    end
+    it 'pring stat from file' do
+      expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }
+        .to output(a_string_including('index'))
+        .to_stdout_from_any_process
+    end
+  end
+end
+
+describe RSlog do
+  context 'create appropriate objects' do
+    let(:container) { build(:container_with_data) }
+    it('creates Container') { expect(container).to be_instance_of(Container) }
+    ARGV << './spec/fixtures/files/good.log'
+    it('run') {
+      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
+    }
+    ARGV.pop
+
+    it 'process_all' do
+      expect { Container.new.process_all }.to output(/No file/).to_stdout_from_any_process
+    end
+  end
+end
