@@ -92,7 +92,7 @@ rubocop
 
 - [ ] Separate functionality of DECORATORS from Presenter 
 
-- [x] Separate functionality of OPTS from InputParser ~~
+- [x] Separate functionality of OPTS from InputParser
 
 - [ ] Accept --format option in command line to format output as table or plain text
 
