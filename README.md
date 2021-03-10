@@ -5,7 +5,7 @@
 ## Usage:
   rslog path_to_file_with_log_data
 
-  Usage: rslog FILENAME  
+  Usage: rslog FILENAME.[log|txt]  
     -v, --version                    Show version and exit  
     -h, --help                       Prints this message and exit  
 
