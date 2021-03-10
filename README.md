@@ -1,9 +1,11 @@
-# **rslog** is a ruby gem to analyze webserver.log to find out page views metrics
+# ***rslog*** is a ruby gem to analyze webserver.log to find out page views metrics
 #### Author: Andrey Eremeev
 #### ruby-version: later than 2.6.0
 
 ## Usage:
-  > rslog path_to_file_with_log_data
+  ```
+  rslog path_to_file_with_log_data
+  ```
 
   Usage: rslog FILENAME.[log|txt]  
     -v, --version                    Show version and exit  
@@ -60,16 +62,24 @@
 
 ## Installation
 ### without bundler
-> gem install rslog
+```
+gem install rslog
+```
 ### with bundler
-put 'gem rslog' to Gemfile
-> bundle install
+put "gem 'rslog'" to Gemfile
+```
+bundle install
+```
 
 ## To test run
-> rspec
+```
+rspec
+```
 
 ## To check syntax run
-> rubocop
+```
+rubocop
+```
 
 
 # Future possible work:
@@ -82,6 +92,8 @@ put 'gem rslog' to Gemfile
 
 3. Separate functionality of DECORATORS from Presenter 
 
-4. Separate functionality of OPTS from InputParser 
+4. ~~Separate functionality of OPTS from InputParser ~~
+
+5. Accept --format option in command line to format output as table or plain text
 
 
