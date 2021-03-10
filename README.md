@@ -5,9 +5,9 @@
 ## Usage:
   rslog path_to_file_with_log_data
 
-  Usage: rslog FILENAME
-    -v, --version                    Show version and exit
-    -h, --help                       Prints this message and exit
+  Usage: rslog FILENAME  
+    -v, --version                    Show version and exit  
+    -h, --help                       Prints this message and exit  
 
 
 ## Main Ideas of Design Application:
