@@ -19,18 +19,26 @@ module Opts
 
   def self.create_opts
     OptionParser.new do |opts|
-      opts.banner = "Usage: #{File.basename($PROGRAM_NAME)} FILENAME"
+      banner(opts)
       help(opts)
-      opts.on(*Opts::HELP[:descr]) do
-        Opts::HELP[:action].call(opts)
-        exit
-      end
+      version(opts)
     end
+  end
+
+  def self.banner(opts)
+    opts.banner = "Usage: #{File.basename($PROGRAM_NAME)} FILENAME"
   end
 
   def self.help(opts)
     opts.on(*Opts::VERSION[:descr]) do
       Opts::VERSION[:action].call
+      exit
+    end
+  end
+
+  def self.version(opts)
+    opts.on(*Opts::HELP[:descr]) do
+      Opts::HELP[:action].call(opts)
       exit
     end
   end
