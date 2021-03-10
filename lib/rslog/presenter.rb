@@ -3,6 +3,8 @@
 require_relative 'tools/hash'
 require_relative 'tools/array'
 
+require 'pry'
+
 # Class to present result in needed format
 #
 class Presenter

@@ -13,7 +13,6 @@ class InputParser
   end
 
   def execute
-    @opts = Opts.create_opts
     handle_opts
     handle_args
     self
@@ -24,7 +23,7 @@ class InputParser
   attr_accessor :opts
 
   def handle_opts
-    @opts.parse!(into: @container.options)
+    Opts.create_opts.parse!(into: @container.options)
   rescue OptionParser::InvalidOption => e
     @container.add_error e
   end
