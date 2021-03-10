@@ -20,7 +20,7 @@ class Presenter < Worker
 
   def execute(type, formatter)
     @type = type
-    @container.add_message send("format_as_#{formatter}")
+    container.add_message send("format_as_#{formatter}")
     self
   end
 
@@ -41,7 +41,7 @@ class Presenter < Worker
   def format_as_text
     [
       title,
-      @container.result.to_multiline_string(suffix),
+      container.result.to_multiline_string(suffix),
       separator
     ].join("\n")
   end

@@ -19,13 +19,13 @@ class InputParser < Worker
   attr_accessor :opts
 
   def handle_opts
-    Opts.create_opts.parse!(into: @container.options)
+    Opts.create_opts.parse!(into: container.options)
   rescue OptionParser::InvalidOption => e
-    @container.add_error e
+    container.add_error e
   end
 
   def handle_args
-    @container.file_name = ARGV.select { |str| str =~ /.\.log|.\.txt/ }[0] || ''
-    @container.add_error 'No file_name provided' if @container.file_name.empty?
+    container.file_name = ARGV.select { |str| str =~ /.\.log|.\.txt/ }[0] || ''
+    container.add_error 'No file_name provided' if container.file_name.empty?
   end
 end

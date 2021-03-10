@@ -16,14 +16,14 @@ class Validator < Worker
   }.freeze
 
   def execute
-    @container.add_message MESSAGES[validate].call(@container.validator)
+    container.add_message MESSAGES[validate].call(container.validator)
     self
   end
 
   private
 
   def validate
-    return :valid if @container.data.all? TEMPLATES[@container.validator]
+    return :valid if container.data.all? TEMPLATES[container.validator]
 
     :invalid
   end

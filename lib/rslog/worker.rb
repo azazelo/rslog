@@ -3,6 +3,8 @@
 # Class to hold worker functionality
 #
 class Worker
+  attr_reader :container
+
   def initialize(container)
     @container = container
   end
