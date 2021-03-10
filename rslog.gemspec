@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'rslog'
-  s.version     = '0.0.8'
+  s.version     = '0.0.9'
   s.required_ruby_version = '~> 2.6.0'
   s.executables << 'rslog'
   s.summary     = 'R(uby)S(tatistic)log'
@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.files       = %w[
     lib/rslog.rb
     lib/rslog/container.rb
+    lib/rslog/worker.rb
     lib/rslog/data_parser.rb
     lib/rslog/extractor.rb
     lib/rslog/input_parser.rb

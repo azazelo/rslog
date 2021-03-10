@@ -109,7 +109,6 @@
         "lines": [
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -144,6 +143,7 @@
       },
       "/Users/andrey/projects/rslog/lib/rslog/worker.rb": {
         "lines": [
+          null,
           null,
           null,
           null,
@@ -200,7 +200,6 @@
           null,
           null,
           1,
-          null,
           1,
           4,
           4,
@@ -330,7 +329,6 @@
       },
       "/Users/andrey/projects/rslog/lib/rslog/presenter.rb": {
         "lines": [
-          null,
           null,
           null,
           1,
@@ -781,6 +779,6 @@
         ]
       }
     },
-    "timestamp": 1615374204
+    "timestamp": 1615374499
   }
 }
