@@ -2,17 +2,14 @@
 
 require_relative 'tools/array'
 require_relative 'tools/hash'
+require_relative 'worker'
 require_relative 'validator'
 
 # Class to parse data from given array
 #
-class DataParser
+class DataParser < Worker
   # type = :count (default) -> just count in groups
   # type = :uniq -> uniq entries in groups
-  def initialize(container)
-    @container = container
-  end
-
   def execute(type)
     @container.result =
       @container.data
