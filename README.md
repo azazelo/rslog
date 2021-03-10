@@ -27,8 +27,7 @@
 
 ####  InputHandler < Worker
   Parsing input options and args, creates object to hold options and args  
-  Validating options and args if they compatible with rules  
-  to pass to next step  
+  Validating options and args if they compatible with rules  to pass to next step  
 
 ####  Extractor < Worker
   Extracts data from file  
