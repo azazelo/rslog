@@ -3,7 +3,7 @@
 #### ruby-version: later than 2.6.0
 
 ## Usage:
-  rslog path_to_file_with_log_data
+  > rslog path_to_file_with_log_data
 
   Usage: rslog FILENAME.[log|txt]  
     -v, --version                    Show version and exit  
