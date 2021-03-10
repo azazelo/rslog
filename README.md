@@ -84,16 +84,16 @@ rubocop
 
 # Future possible work:
 
-1. Make possible to output result to HTML, JSON, CSV formats
+- [ ] Make possible to output result to HTML, JSON, CSV formats
    See Presenter class for more ideas
 
-2. Make possible to analyse more metrics, for example what time most visited, 
+- [ ] Make possible to analyse more metrics, for example what time most visited, 
    if webserver.log will include timestamp
 
-3. Separate functionality of DECORATORS from Presenter 
+- [ ] Separate functionality of DECORATORS from Presenter 
 
-4. ~~Separate functionality of OPTS from InputParser ~~
+- [x] Separate functionality of OPTS from InputParser ~~
 
-5. Accept --format option in command line to format output as table or plain text
+- [ ] Accept --format option in command line to format output as table or plain text
 
 
