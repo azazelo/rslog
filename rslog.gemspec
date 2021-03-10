@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'rslog'
-  s.version     = '0.0.10'
+  s.version     = '0.0.11'
   s.required_ruby_version = '~> 2.6.0'
   s.executables << 'rslog'
   s.summary     = 'R(uby)S(tatistic)log'
