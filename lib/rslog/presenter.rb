@@ -24,7 +24,7 @@ class Presenter
 
   def execute(type, formatter)
     @type = type
-    @container.messages << send("format_as_#{formatter}")
+    @container.add_message send("format_as_#{formatter}")
     self
   end
 
