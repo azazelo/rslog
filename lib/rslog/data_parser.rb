@@ -4,8 +4,6 @@ require_relative 'tools/array'
 require_relative 'tools/hash'
 require_relative 'validator'
 
-require 'pry'
-
 # Class to parse data from given array
 #
 class DataParser

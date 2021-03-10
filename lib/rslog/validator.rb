@@ -20,7 +20,7 @@ class Validator
   end
 
   def execute
-    @container.messages << MESSAGES[validate].call(@container.validator)
+    @container.add_message MESSAGES[validate].call(@container.validator)
     self
   end
 

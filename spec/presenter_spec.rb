@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Presenter do
-  let(:container) { build(:container_with_result) }
+  let(:container) { build(:container_valid_ips) }
   let(:presenter_all) { Presenter.new(container) }
   let(:presenter_uniq) { Presenter.new(container) }
 
