@@ -13,7 +13,7 @@ class Extractor < Worker
   def file_name
     container.file_name
   end
-  
+
   def check
     if File.zero?(file_name)
       container.add_message 'Empty file'
