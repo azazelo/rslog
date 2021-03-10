@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'worker'
 require_relative 'tools/hash'
 require_relative 'tools/array'
 

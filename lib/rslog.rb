@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require_relative 'rslog/container'
+require_relative 'rslog/worker'
 require_relative 'rslog/input_parser'
 require_relative 'rslog/extractor'
 require_relative 'rslog/validator'
@@ -13,7 +14,7 @@ require_relative 'rslog/opts'
 # require 'pry'
 
 class RSlog
-  VERSION = '0.0.9'
+  VERSION = '0.0.10'
 
   def self.run
     Container.new.process_all

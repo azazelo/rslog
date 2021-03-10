@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'optparse'
-require_relative 'worker'
 require_relative 'opts'
 
 # Class to parse input filenames and args

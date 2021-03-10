@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Class to hold data and implement processing
-
+#
 class Container
   attr_accessor(*%i[
                   argv file_name messages errors data options validator types result

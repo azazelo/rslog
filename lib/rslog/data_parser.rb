@@ -2,7 +2,6 @@
 
 require_relative 'tools/array'
 require_relative 'tools/hash'
-require_relative 'worker'
 
 # Class to parse data from given array
 #

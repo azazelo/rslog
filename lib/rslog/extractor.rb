@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'worker'
-
 # Class for extracting data from file
 #
 class Extractor < Worker

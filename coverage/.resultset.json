@@ -27,6 +27,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null,
@@ -105,11 +106,27 @@
           null
         ]
       },
+      "/Users/andrey/projects/rslog/lib/rslog/worker.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          23,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
       "/Users/andrey/projects/rslog/lib/rslog/input_parser.rb": {
         "lines": [
           null,
           null,
-          1,
           1,
           1,
           null,
@@ -137,23 +154,6 @@
           1,
           7,
           3,
-          null,
-          null
-        ]
-      },
-      "/Users/andrey/projects/rslog/lib/rslog/worker.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          23,
-          null,
-          null,
-          1,
-          0,
           null,
           null
         ]
@@ -194,8 +194,6 @@
       "/Users/andrey/projects/rslog/lib/rslog/extractor.rb": {
         "lines": [
           null,
-          null,
-          1,
           null,
           null,
           null,
@@ -278,8 +276,6 @@
           null,
           1,
           1,
-          1,
-          null,
           null,
           null,
           null,
@@ -331,7 +327,6 @@
         "lines": [
           null,
           null,
-          1,
           1,
           1,
           null,
@@ -779,6 +774,6 @@
         ]
       }
     },
-    "timestamp": 1615375000
+    "timestamp": 1615375701
   }
 }
