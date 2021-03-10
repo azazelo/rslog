@@ -3,7 +3,6 @@
 require_relative 'tools/array'
 require_relative 'tools/hash'
 require_relative 'worker'
-require_relative 'validator'
 
 # Class to parse data from given array
 #
