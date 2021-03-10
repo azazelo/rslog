@@ -5,7 +5,6 @@ require_relative 'worker'
 # Class for extracting data from file
 #
 class Extractor < Worker
-
   def execute
     @file_name = @container.file_name
     check

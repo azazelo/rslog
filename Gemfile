@@ -15,5 +15,5 @@ group :development, :test do
   gem 'simplecov'
 end
 
-gem 'hirb'
 gem 'coderay'
+gem 'hirb'
