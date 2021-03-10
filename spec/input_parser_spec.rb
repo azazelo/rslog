@@ -15,6 +15,7 @@ describe InputParser do
     ARGV << 'server.log'
     input_parser.execute
     expect(container).to have_attributes(file_name: 'server.log')
+    ARGV.pop
   end
 
   it 'creates version action' do
@@ -27,6 +28,4 @@ describe InputParser do
     expect { Opts::HELP[:action].call('help') }
       .to output(/help/).to_stdout_from_any_process
   end
-
-  xit 'handle wrong option'
 end

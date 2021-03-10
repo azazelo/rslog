@@ -53,13 +53,11 @@ end
 
 describe RSlog do
   context 'create appropriate objects' do
-    let(:container) { build(:container_with_data) }
+    let(:container) { build(:container) }
     it('creates Container') { expect(container).to be_instance_of(Container) }
-    ARGV << './spec/fixtures/files/good.log'
     it('run') {
       expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
     }
-    ARGV.pop
 
     it 'process_all' do
       expect { Container.new.process_all }.to output(/No file/).to_stdout_from_any_process
