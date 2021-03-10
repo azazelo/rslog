@@ -16,8 +16,6 @@ class InputParser < Worker
 
   private
 
-  attr_accessor :opts
-
   def handle_opts
     Opts.create_opts.parse!(into: container.options)
   rescue OptionParser::InvalidOption => e
