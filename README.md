@@ -4,7 +4,7 @@
 
 ## Usage:
   ```
-  rslog path_to_file_with_log_data
+  rslog path_to_file_with_log_data.[txt|log]
   ```
 
   Usage: rslog FILENAME.[log|txt]  
