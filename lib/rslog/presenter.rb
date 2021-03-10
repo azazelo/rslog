@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+
+require_relative 'worker'
 require_relative 'tools/hash'
 require_relative 'tools/array'
 
 # Class to present result in needed format
 #
-class Presenter
+class Presenter < Worker
   DECORATORS = {
     all:  {
       title:
@@ -17,10 +19,6 @@ class Presenter
       suffix: 'unique views'
     }
   }.freeze
-
-  def initialize(container)
-    @container = container
-  end
 
   def execute(type, formatter)
     @type = type

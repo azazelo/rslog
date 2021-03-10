@@ -1,16 +1,13 @@
 # frozen_string_literal: true
 
-require_relative 'container'
+require_relative 'worker'
 
 # Class for extracting data from file
 #
-class Extractor
-  def initialize(container)
-    @container = container
-    @file_name = container.file_name
-  end
+class Extractor < Worker
 
   def execute
+    @file_name = @container.file_name
     check
     self
   end
