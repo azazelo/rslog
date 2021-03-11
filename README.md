@@ -42,7 +42,7 @@
   Parses data in file, calculates counts
 
 ####  Presenter < Worker
-  Format output and prepares it for output
+  Format result and prepares it for output
 
 ####  RSlog 
   Runs Container.process_all and show output:  
