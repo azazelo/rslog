@@ -5,7 +5,7 @@
 module Opts
   VERSION = {
     descr:  ['-v', '--version', 'Show version and exit'],
-    action: proc do
+    action: proc do |opts|
       puts "#{File.basename($PROGRAM_NAME)}: #{RSlog::VERSION}"
     end
   }.freeze
@@ -29,14 +29,14 @@ module Opts
     opts.banner = "Usage: #{File.basename($PROGRAM_NAME)} FILENAME"
   end
 
-  def help(opts)
+  def version(opts)
     opts.on(*Opts::VERSION[:descr]) do
-      Opts::VERSION[:action].call
+      Opts::VERSION[:action].call(opts)
       exit
     end
   end
 
-  def version(opts)
+  def help(opts)
     opts.on(*Opts::HELP[:descr]) do
       Opts::HELP[:action].call(opts)
       exit
