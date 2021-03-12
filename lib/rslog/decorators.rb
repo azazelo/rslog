@@ -20,6 +20,6 @@ module Decorators
   end
 
   def self.separator
-    '-----------------------------'
+    '-' * 30
   end
 end

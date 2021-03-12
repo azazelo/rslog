@@ -22,11 +22,7 @@ class Presenter < Worker
     [
       Decorators.send("#{type}_title"),
       container.result.to_multiline_string(Decorators.send("#{type}_suffix")),
-      separator
+      Decorators.separator
     ].join("\n")
-  end
-
-  def separator
-    '-----------------------------'
   end
 end
