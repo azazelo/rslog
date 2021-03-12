@@ -20,9 +20,9 @@ class Presenter < Worker
 
   def format_as_text
     [
-      Decorators.send("#{type}_title"),
-      container.result.to_multiline_string(Decorators.send("#{type}_suffix")),
-      Decorators.separator
+      send("#{type}_title"),
+      container.result.to_multiline_string(send("#{type}_suffix")),
+      separator
     ].join("\n")
   end
 end
