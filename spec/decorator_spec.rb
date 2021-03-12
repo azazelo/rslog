@@ -10,14 +10,13 @@ describe Decorators do
   it 'show all suffix' do
     expect(Decorators.all_suffix)
       .to eq('visits')
-  end    
+  end
   it 'show uniq title' do
     expect(Decorators.uniq_title)
       .to eq('List list of webpages with most unique page views also ordered')
-  end    
+  end
   it 'show all title' do
     expect(Decorators.uniq_suffix)
       .to eq('unique views')
-  end    
-
+  end
 end

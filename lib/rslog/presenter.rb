@@ -8,7 +8,7 @@ require_relative 'tools/array'
 class Presenter < Worker
   include Decorators
 
-  attr_accessor :type
+  attr_reader :type
 
   def execute(type, formatter)
     @type = type
