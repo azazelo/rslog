@@ -17,7 +17,7 @@ module Opts
     end
   }.freeze
 
-  def self.create_opts
+  def create_opts
     OptionParser.new do |opts|
       banner(opts)
       help(opts)
@@ -25,18 +25,18 @@ module Opts
     end
   end
 
-  def self.banner(opts)
+  def banner(opts)
     opts.banner = "Usage: #{File.basename($PROGRAM_NAME)} FILENAME"
   end
 
-  def self.help(opts)
+  def help(opts)
     opts.on(*Opts::VERSION[:descr]) do
       Opts::VERSION[:action].call
       exit
     end
   end
 
-  def self.version(opts)
+  def version(opts)
     opts.on(*Opts::HELP[:descr]) do
       Opts::HELP[:action].call(opts)
       exit

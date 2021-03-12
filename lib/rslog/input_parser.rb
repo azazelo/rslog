@@ -17,7 +17,7 @@ class InputParser < Worker
   private
 
   def handle_opts
-    Opts.create_opts.parse!(into: container.options)
+    create_opts.parse!(into: container.options)
   rescue OptionParser::InvalidOption => e
     container.add_error e
   end
