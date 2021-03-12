@@ -1,4 +1,4 @@
-# ***rslog*** [R(uby)S(tat)log] is a ruby gem to analyze webserver.log to find out page views metrics
+# ***rslog*** [r(uby)s(tat)log] is a ruby gem to analyze webserver.log to find out page views metrics
 #### Author: Andrey Eremeev
 #### ruby-version: later than 2.6.0
 
