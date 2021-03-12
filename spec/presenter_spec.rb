@@ -7,24 +7,24 @@ describe Presenter do
   let(:presenter_all) { Presenter.new(container) }
   let(:presenter_uniq) { Presenter.new(container) }
 
-  it 'show uniq suffix' do
-    presenter_uniq.execute(:uniq, :text)
-    expect(container.messages)
-      .to include(Regexp.new(Presenter::DECORATORS[:uniq][:suffix]))
-  end
-  it 'show suffix' do
-    presenter_uniq.execute(:all, :text)
-    expect(container.messages)
-      .to include(Regexp.new(Presenter::DECORATORS[:all][:suffix]))
-  end
   it 'show all title' do
     presenter_uniq.execute(:all, :text)
     expect(container.messages)
-      .to include(Regexp.new(Presenter::DECORATORS[:all][:title]))
+      .to include(Regexp.new(Decorators.all_title))
+  end
+  it 'show all suffix' do
+    presenter_uniq.execute(:all, :text)
+    expect(container.messages)
+      .to include(Regexp.new(Decorators.all_suffix))
   end
   it 'show uniq title' do
     presenter_uniq.execute(:uniq, :text)
     expect(container.messages)
-      .to include(Regexp.new(Presenter::DECORATORS[:uniq][:title]))
+      .to include(Regexp.new(Decorators.uniq_title))
+  end
+  it 'show uniq suffix' do
+    presenter_uniq.execute(:uniq, :text)
+    expect(container.messages)
+      .to include(Regexp.new(Decorators.uniq_suffix))
   end
 end

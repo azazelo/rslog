@@ -6,17 +6,9 @@ require_relative 'tools/array'
 # Class to present result in needed format
 #
 class Presenter < Worker
-  DECORATORS = {
-    all:  {
-      title:
-              'List of webpages with most page views ordered from most views to less',
-      suffix: 'visits'
-    },
-    uniq: {
-      title:  'List list of webpages with most unique page views also ordered',
-      suffix: 'unique views'
-    }
-  }.freeze
+  include Decorators
+
+  attr_accessor :type
 
   def execute(type, formatter)
     @type = type
@@ -26,22 +18,10 @@ class Presenter < Worker
 
   private
 
-  def title
-    decorator[:title]
-  end
-
-  def suffix
-    decorator[:suffix]
-  end
-
-  def decorator
-    DECORATORS[@type]
-  end
-
   def format_as_text
     [
-      title,
-      container.result.to_multiline_string(suffix),
+      Decorators.send("#{type}_title"),
+      container.result.to_multiline_string(Decorators.send("#{type}_suffix")),
       separator
     ].join("\n")
   end

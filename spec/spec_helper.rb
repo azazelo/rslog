@@ -13,6 +13,7 @@ require_relative '../lib/rslog/validator'
 require_relative '../lib/rslog/extractor'
 require_relative '../lib/rslog/data_parser'
 require_relative '../lib/rslog/presenter'
+require_relative '../lib/rslog/decorators'
 require_relative '../lib/rslog/tools/array'
 
 RSpec.configure do |config|

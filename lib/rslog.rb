@@ -3,18 +3,19 @@
 
 require_relative 'rslog/container'
 require_relative 'rslog/worker'
+require_relative 'rslog/opts'
 require_relative 'rslog/input_parser'
 require_relative 'rslog/extractor'
 require_relative 'rslog/validator'
 require_relative 'rslog/data_parser'
+require_relative 'rslog/decorators'
 require_relative 'rslog/presenter'
-require_relative 'rslog/opts'
 
 # For development
 # require 'pry'
 
 class RSlog
-  VERSION = '0.0.12'
+  VERSION = '0.0.14'
 
   def self.run
     Container.new.process_all
