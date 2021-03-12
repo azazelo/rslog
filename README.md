@@ -90,7 +90,7 @@ rubocop
 - [ ] Make possible to analyse more metrics, for example what time most visited, 
    if webserver.log will include timestamp
 
-- [ ] Separate functionality of DECORATORS from Presenter 
+- [x] Separate functionality of DECORATORS from Presenter 
 
 - [x] Separate functionality of OPTS from InputParser
 
