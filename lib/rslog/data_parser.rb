@@ -8,7 +8,12 @@ require_relative 'tools/hash'
 class DataParser < Worker
   # type = :count (default) -> just count in groups
   # type = :uniq -> uniq entries in groups
-  def execute(type)
+  def initialize(container, type)
+    super(container)
+    @type = type
+  end
+
+  def execute
     container.result =
       container.data
                .group_by_index(0)
@@ -19,4 +24,8 @@ class DataParser < Worker
                .map { |elem_arr| elem_arr.map(&:to_s).join(' ') }
     self
   end
+
+  private
+
+  attr_reader :type
 end

@@ -62,7 +62,7 @@ describe Container do
     let(:extractor) { Extractor.new(container) }
     it('creates Extractor') { expect(extractor).to be_instance_of(Extractor) }
 
-    let(:presenter) { Presenter.new(container) }
+    let(:presenter) { Presenter.new(container, :all, :text) }
     it('creates presenter') { expect(presenter).to be_instance_of(Presenter) }
   end
 end

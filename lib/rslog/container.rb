@@ -51,8 +51,8 @@ class Container
   def validate_parse_present
     Validator.new(self).execute
     types.each do |type|
-      DataParser.new(self).execute(type)
-      Presenter.new(self).execute(type, :text)
+      DataParser.new(self, type).execute
+      Presenter.new(self, type, :text).execute
     end
   end
 end

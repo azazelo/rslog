@@ -26,6 +26,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
   # config.supports_block_expectations = true
   config.include FileFixtures
+  config.include Decorators
 
   config.include FactoryBot::Syntax::Methods
 

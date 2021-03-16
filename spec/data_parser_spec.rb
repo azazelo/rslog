@@ -11,20 +11,20 @@ describe DataParser do
   end
 
   let(:container_valid_ips) { build(:container_valid_ips) }
-  let(:data_parser) { DataParser.new(container_valid_ips) }
+  let(:data_parser) { DataParser.new(container_valid_ips, :all) }
 
   it 'size of uniq urls is 3' do
-    data_parser.execute(:all)
+    data_parser.execute
     expect(container_valid_ips.result.size).to eq 3
   end
 
   it 'group lines by url ' do
-    data_parser.execute(:all)
+    data_parser.execute
     expect(container_valid_ips.result).to be_a Array
   end
 
   it 'count visits by url' do
-    data_parser.execute(:all)
+    data_parser.execute
     expect(container_valid_ips.result).to eq(visits_count)
   end
 end

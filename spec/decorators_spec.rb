@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-include Decorators
 
 describe Decorators do
   it 'get all title' do

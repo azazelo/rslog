@@ -5,7 +5,7 @@
 module Opts
   VERSION = {
     descr:  ['-v', '--version', 'Show version and exit'],
-    action: proc do |opts|
+    action: proc do |_opts|
       puts "#{File.basename($PROGRAM_NAME)}: #{RSlog::VERSION}"
     end
   }.freeze

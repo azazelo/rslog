@@ -8,10 +8,15 @@ require_relative 'tools/array'
 class Presenter < Worker
   include Decorators
 
-  attr_reader :type
+  attr_reader :type, :formatter
 
-  def execute(type, formatter)
+  def initialize(container, type, formatter)
+    super(container)
     @type = type
+    @formatter = formatter
+  end
+
+  def execute
     container.add_message send("format_as_#{formatter}")
     self
   end
