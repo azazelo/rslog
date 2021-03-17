@@ -96,4 +96,7 @@ rubocop
 
 - [ ] Accept --format option in command line to format output as table or plain text
 
-
+- [ ] Accept --metrics option in command line to count specific statistics  
+      for example:  
+      --metrics unique, all, avg - defaults  
+      --metrics unique - count  and show only uniq visiters by url  
