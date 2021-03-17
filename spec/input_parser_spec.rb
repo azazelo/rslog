@@ -2,20 +2,25 @@
 
 require 'spec_helper'
 
-describe InputParser do
+describe InputParser, :aggregate_failures do
   let(:container) {  build(:container) }
   let(:input_parser) { InputParser.new(container) }
 
-  it 'container have attributes @options and @filename' do
-    input_parser.execute
-    expect(container).to have_attributes(file_name: '', options: nil, errors: ['No file_name provided'])
+  context 'when no file_name provided' do
+    it 'return error `No file_name provided`' do
+      input_parser.execute
+      expect(container).to have_attributes(file_name: '', options: nil)
+      expect(container.errors).to include('No file_name provided')
+    end
   end
 
-  it 'container have file_name set to server.log' do
-    ARGV << 'server.log'
-    input_parser.execute
-    expect(container).to have_attributes(file_name: 'server.log')
-    ARGV.pop
+  context 'when file_name is server.log' do
+    it 'container get file_name set to server.log' do
+      ARGV << 'server.log'
+      input_parser.execute
+      expect(container).to have_attributes(file_name: 'server.log')
+      ARGV.pop
+    end
   end
 
   it 'creates version action' do
