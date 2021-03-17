@@ -42,6 +42,7 @@ describe RSlog do
     end
   end
 end
+
 describe RSlog do
   context 'when ip in given file are not valid' do
     it 'Prints message some IPs are NOT valid' do
