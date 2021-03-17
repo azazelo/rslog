@@ -27,22 +27,30 @@
 require 'spec_helper'
 
 describe RSlog do
-  context 'integration' do
+  context 'when user want to see version of gem' do
     it 'print version' do
       expect { system %(./bin/rslog --version) }
         .to output(a_string_including('0.0.1'))
         .to_stdout_from_any_process
     end
+  end
+  context 'when user wants to see help information' do
     it 'print usage information' do
       expect { system %(./bin/rslog --help) }
         .to output(a_string_including('Usage'))
         .to_stdout_from_any_process
     end
+  end
+end
+describe RSlog do
+  context 'when ip in given file are not valid' do
     it 'Prints message some IPs are NOT valid' do
       expect { system %(./bin/rslog ./spec/fixtures/files/bad.log) }
         .to output(a_string_including('Some IPs are NOT valid'))
         .to_stdout_from_any_process
     end
+  end
+  context 'when ip in given file are not valid' do
     it 'pring stat from file' do
       expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }
         .to output(a_string_including('index'))
