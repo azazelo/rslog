@@ -11,7 +11,7 @@ class Container
     @errors = []
     @messages = []
     @validator = :ip
-    @types = %i[all uniq]
+    @types = %i[all uniq avg]
   end
 
   def file_name?
@@ -38,21 +38,5 @@ class Container
     puts messages.join("\n")
     puts errors.join("\n")
     self
-  end
-
-  def process_all
-    InputParser.new(self).execute
-    Extractor.new(self).execute if file_name?
-    validate_parse_present if data?
-    talk
-    self
-  end
-
-  def validate_parse_present
-    Validator.new(self).execute
-    types.each do |type|
-      DataParser.new(self, type).execute
-      Presenter.new(self, type, :text).execute
-    end
   end
 end

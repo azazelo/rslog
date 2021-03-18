@@ -45,14 +45,14 @@ end
 
 describe RSlog do
   context 'when ip in given file are not valid' do
-    it 'Prints message some IPs are NOT valid' do
+    it 'prints message some IPs are NOT valid' do
       expect { system %(./bin/rslog ./spec/fixtures/files/bad.log) }
         .to output(a_string_including('Some IPs are NOT valid'))
         .to_stdout_from_any_process
     end
   end
-  context 'when ip in given file are not valid' do
-    it 'pring stat from file' do
+  context 'when ip in given file are valid' do
+    it 'prints stat for file' do
       expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }
         .to output(a_string_including('index'))
         .to_stdout_from_any_process
@@ -63,13 +63,14 @@ end
 describe RSlog do
   context 'create appropriate objects' do
     let(:container) { build(:container) }
+    let(:worker) { Worker.new(container) }
     it('creates Container') { expect(container).to be_instance_of(Container) }
     it('run') {
       expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
     }
 
     it 'process_all' do
-      expect { Container.new.process_all }.to output(/No file/).to_stdout_from_any_process
+      expect { worker.process_all }.to output(/No file/).to_stdout_from_any_process
     end
   end
 end

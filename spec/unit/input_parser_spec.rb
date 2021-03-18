@@ -22,7 +22,9 @@ describe InputParser, :aggregate_failures do
       ARGV.pop
     end
   end
+end
 
+describe InputParser, :aggregate_failures do
   it 'creates version action' do
     expect { Opts::VERSION[:action].call }
       .to output(Regexp.new(RSlog::VERSION))

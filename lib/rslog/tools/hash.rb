@@ -20,4 +20,12 @@ class Hash
     end
     res
   end
+
+  def count_by_groups_avg
+    res = {}
+    each do |group_key, arr|
+      res[group_key] = arr.size / Set.new(arr).size
+    end
+    res
+  end
 end

@@ -18,7 +18,7 @@ class RSlog
   VERSION = '0.0.14'
 
   def self.run
-    Container.new.process_all
+    Worker.new(Container.new).process_all
   end
 end
 
