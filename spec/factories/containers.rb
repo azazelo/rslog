@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :container, class: Container do
+  factory :source do
     file_name { '' }
     options { nil }
     messages { ['message'] }

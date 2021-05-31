@@ -7,14 +7,13 @@ SimpleCov.start
 
 require_relative 'support/file_fixtures'
 require_relative '../lib/rslog'
-require_relative '../lib/rslog/container'
-require_relative '../lib/rslog/input_parser'
-require_relative '../lib/rslog/validator'
-require_relative '../lib/rslog/extractor'
-require_relative '../lib/rslog/data_parser'
-require_relative '../lib/rslog/presenter'
-require_relative '../lib/rslog/decorators'
-require_relative '../lib/rslog/tools/array'
+#require_relative '../lib/rslog/handler'
+#require_relative '../lib/rslog/extractor'
+#require_relative '../lib/rslog/validator'
+#require_relative '../lib/rslog/sortator'
+#require_relative '../lib/rslog/groupator'
+#require_relative '../lib/rslog/formattor'
+#require_relative '../lib/rslog/printor'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -26,7 +25,6 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
   # config.supports_block_expectations = true
   config.include FileFixtures
-  config.include Decorators
 
   config.include FactoryBot::Syntax::Methods
 

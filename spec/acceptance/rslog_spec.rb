@@ -29,15 +29,15 @@ require 'spec_helper'
 describe RSlog do
   context 'when user want to see version of gem' do
     it 'print version' do
-      expect { system %(./bin/rslog --version) }
-        .to output(a_string_including('0.0.1'))
+      expect { system %(./bin/rslog -v) }
+        .to output(a_string_including('0.0.14'))
         .to_stdout_from_any_process
     end
   end
   context 'when user wants to see help information' do
     it 'print usage information' do
-      expect { system %(./bin/rslog --help) }
-        .to output(a_string_including('Usage'))
+      expect { system %(./bin/rslog -h) }
+        .to output(a_string_including('Help'))
         .to_stdout_from_any_process
     end
   end
@@ -60,17 +60,17 @@ describe RSlog do
   end
 end
 
-describe RSlog do
-  context 'create appropriate objects' do
-    let(:container) { build(:container) }
-    let(:worker) { Worker.new(container) }
-    it('creates Container') { expect(container).to be_instance_of(Container) }
-    it('run') {
-      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
-    }
-
-    it 'process_all' do
-      expect { worker.process_all }.to output(/No file/).to_stdout_from_any_process
-    end
-  end
-end
+#describe RSlog do
+#  context 'create appropriate objects' do
+#    let(:container) { build(:container) }
+#    let(:worker) { Worker.new(container) }
+#    it('creates Container') { expect(container).to be_instance_of(Container) }
+#    it('run') {
+#      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
+#    }
+#
+#    it 'process_all' do
+#      expect { worker.process_all }.to output(/No file/).to_stdout_from_any_process
+#    end
+#  end
+#end
