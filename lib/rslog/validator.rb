@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-# Class to validate if we have valid data in lines, for example well formatted IPs
-#
-# Checks if IPs are comply with regex
-# Output message "Valid IPs"/"Invalid IPs"
-#
 module RSlog
+  # Class to validate if we have valid data in lines, for example well formatted IPs
+  #
+  # Checks if IPs are comply with regex
+  # Output message "Valid IPs"/"Invalid IPs"
+  #
   module Validator
     TEMPLATES = {
       # IP address regex, source https://regexr.com/38odc

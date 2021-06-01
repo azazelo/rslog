@@ -1,18 +1,59 @@
 # frozen_string_literal: true
 
-# Class to hold data and implement processing
-#
 module RSlog
+  # Module to parse options and arguments
+  #
   module ArgsHandler
     def self.handle(args)
-      options = args.reject { |el| (el =~ /^-/).nil? }
-      file_names = args - options
+      @args = args
+      @options = @args.select { |el| el =~ /^-/ }
+      if @options.any? || @args.empty?
+        handle_options
+        return []
+      end
 
-      puts 'R(uby)S(imple)log statistics' if options.delete('-h') || args.empty?
-      puts "Version #{RSlog::VERSION}"    if options.delete('-v') || args.empty?
-      puts "Unknown options #{options.join(', ')}" if options.any?
+      # file_names array
+      @args - @options
+    end
 
-      file_names
+    def self.handle_options
+      show_help || show_version || show_unknown_options_warning
+    end
+
+    def self.show_help
+      if @options.delete('-h') || @args.empty?
+        puts help_message
+        return true
+      end
+      false
+    end
+
+    def self.help_message
+      %[
+  R(uby)S(imple)log statistics
+  Usage:
+  > rslog filename[.log|.txt]
+
+  > rslog [-h|-v]
+     -h - show this info
+     -v - show version
+      ]
+    end
+
+    def self.show_version
+      if @options.delete('-v')
+        puts "  Version #{RSlog::VERSION}"
+        return true
+      end
+      false
+    end
+
+    def self.show_unknown_options_warning
+      if @options.any?
+        puts "  Unknown options #{@options.join(', ')}"
+        return true
+      end
+      false
     end
   end
 end

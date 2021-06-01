@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
-# Class to hold data and implement processing
-#
 module RSlog
+  # Class to parse data
+  #
   class Parser
-    attr_reader :calc, :separator
-    attr_accessor :source, :container
+    attr_reader :calc, :separator, :source
 
     def initialize(source, conf)
       @calc      = conf.fetch(:calc)      { proc }
