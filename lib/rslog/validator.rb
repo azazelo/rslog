@@ -6,26 +6,26 @@
 # Output message "Valid IPs"/"Invalid IPs"
 #
 module RSlog
-  class Validator < Handler
+  module Validator
     TEMPLATES = {
       # IP address regex, source https://regexr.com/38odc
       ip: /\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b/
     }.freeze
 
     MESSAGES = {
-      valid:   proc { |validator| "All #{validator.upcase}s are valid" },
-      invalid: proc { |validator| "Some #{validator.upcase}s are NOT valid" }
+      valid:   proc { |validator_name| "All #{validator_name.upcase}s are valid" },
+      invalid: proc { |validator_name| "Some #{validator_name.upcase}s are NOT valid" }
     }.freeze
 
-    def handle(source)
-      puts MESSAGES[validate(source)].call(:ip)
-      @result = source
-      super
+    def self.execute(source)
+      puts
+      puts MESSAGES[valid?(source)].call(:ip)
+      puts
     end
 
     private
 
-    def validate(source)
+    def self.valid?(source)
       return :valid if source.all? TEMPLATES[:ip]
 
       :invalid

@@ -3,13 +3,13 @@
 # Class to hold data and implement processing
 #
 module RSlog
-  class ArgsHandler
-    def self.handle_args(args)
+  module ArgsHandler
+    def self.handle(args)
       options = args.select{|el| !(el =~ /^-/).nil?}
       file_names = args - options
 
-      puts "Help"          if options.delete('-h') || args.empty?
-      puts "Version #{RSlog::VERSION}" if options.delete('-v') || args.empty?
+      puts "R(uby)S(imple)log statistics" if options.delete('-h') || args.empty?
+      puts "Version #{RSlog::VERSION}"    if options.delete('-v') || args.empty?
       puts "Unknown options #{options.join(', ')}" if options.any?
 
       file_names
