@@ -60,7 +60,7 @@ describe RSlog do
   end
 end
 
-#describe RSlog do
+# describe RSlog do
 #  context 'create appropriate objects' do
 #    let(:container) { build(:container) }
 #    let(:worker) { Worker.new(container) }
@@ -73,4 +73,4 @@ end
 #      expect { worker.process_all }.to output(/No file/).to_stdout_from_any_process
 #    end
 #  end
-#end
+# end

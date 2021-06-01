@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Class to validate if we have valid data in lines, for example well formatted IPs
-# 
+#
 # Checks if IPs are comply with regex
 # Output message "Valid IPs"/"Invalid IPs"
 #
@@ -22,8 +22,6 @@ module RSlog
       puts MESSAGES[valid?(source)].call(:ip)
       puts
     end
-
-    private
 
     def self.valid?(source)
       return :valid if source.all? TEMPLATES[:ip]
