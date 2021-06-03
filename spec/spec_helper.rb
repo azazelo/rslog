@@ -41,8 +41,8 @@ def source_data
 end
 
 def sorted_data
-  #  [['/about', 1], ['/about/2', 1], ['/home', 1], ['/contact', 1], ['/help_page/1', 1]]
-  [['/about', 1, 0.2], ['/about/2', 1, 0.2], ['/home', 1, 0.2], ['/contact', 1, 0.2], ['/help_page/1', 1, 0.2]]
+  [['/about', 1], ['/about/2', 1], ['/home', 1], ['/contact', 1], ['/help_page/1', 1]]
+  #  [['/about', 1, 0.2], ['/about/2', 1, 0.2], ['/home', 1, 0.2], ['/contact', 1, 0.2], ['/help_page/1', 1, 0.2]]
 end
 
 def valid_data

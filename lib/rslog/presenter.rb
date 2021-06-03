@@ -45,7 +45,7 @@ module RSlog
     def _top_border
       LEFT_UP_CORNER + _horisontal_line + RIGHT_UP_CORNER
     end
-    
+
     def _middle_border
       VERTICAL_LEFT_BORDER + _horisontal_line + VERTICAL_RIGHT_BORDER
     end

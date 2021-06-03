@@ -41,14 +41,14 @@ module RSlog
     end
 
     def self.config_sets
-      [ { title:           %(List of webpages with most page views ordered from most pages views to less page views:),
-#          head_titles:     %w[Url Visits Average],
-          head_titles:     %w[Url Visits],
-          calc:            proc { |visits| visits.size } },
-        { title:           'List of webpages with most unique page views also ordered:',
-#          head_titles:     %w[Url Unique\ views Average],
-          head_titles:     %w[Url Unique\ views],
-          calc:            proc { |visits| Set.new(visits).size } } ]
+      [{ title:       %(List of webpages with most page views ordered from most pages views to less page views:),
+         #          head_titles:     %w[Url Visits Average],
+         head_titles: %w[Url Visits],
+         calc:        proc { |visits| visits.size } },
+       { title:       'List of webpages with most unique page views also ordered:',
+         #          head_titles:     %w[Url Unique\ views Average],
+         head_titles: %w[Url Unique\ views],
+         calc:        proc { |visits| Set.new(visits).size } }]
     end
   end
 end
