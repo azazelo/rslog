@@ -73,3 +73,22 @@ def sorted_hash
     ['/home', '1']
   ]
 end
+
+def extracted_data 
+  [["/help_page/1", "126.318.035.038"],
+   ["/contact", "184.123.665.067"],
+   ["/home", "184.123.665.067"],
+   ["/about/2", "444.701.448.104"],
+   ["/about", "722.247.931.582"]]
+end
+def grouped_data 
+  [["/help_page/1", [["/help_page/1", "126.318.035.038"]]], 
+   ["/contact", [["/contact", "184.123.665.067"]]],
+   ["/home", [["/home", "184.123.665.067"]]],
+   ["/about/2", [["/about/2", "444.701.448.104"]]],
+   ["/about", [["/about", "722.247.931.582"]]]
+  ]
+end
+def calculated_data 
+  [["/help_page/1", 1], ["/contact", 1], ["/home", 1], ["/about/2", 1], ["/about", 1]]
+end

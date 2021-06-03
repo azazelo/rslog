@@ -17,13 +17,15 @@ module RSlog
       invalid: proc { |validator_name| "Some #{validator_name.upcase}s are NOT valid" }
     }.freeze
 
-    def self.execute(source)
+    def validate(source)
       puts
-      puts MESSAGES[valid?(source)].call(:ip)
+      puts MESSAGES[_valid?(source)].call(:ip)
       puts
     end
 
-    def self.valid?(source)
+    private
+    
+    def _valid?(source)
       return :valid if source.all? TEMPLATES[:ip]
 
       :invalid

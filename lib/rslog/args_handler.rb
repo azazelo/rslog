@@ -5,22 +5,28 @@ module RSlog
   #
   # returns Array of file names
   #
-  class ArgsHandler
-    attr_reader :args, :options
+  module ArgsHandler
+#    attr_reader :args, :options
+#
+#    def initialize(args)
+#      @args = args
+#      @options = @args.select { |el| el =~ /^-/ }
+#    end
 
-    def initialize(args)
+    def file_names_from_args(args)
       @args = args
       @options = @args.select { |el| el =~ /^-/ }
-    end
-
-    def handle
-      if options.any? || args.empty?
+      if @options.any? || @args.empty?
         _handle_options
         return []
       end
 
       # file_names array
-      args - options
+      file_names = @args - @options
+      return file_names if file_names.all? { |file_name| File.file?(file_name) }
+
+      puts 'There is no file names given. Check input.'
+      []
     end
 
     private
@@ -30,7 +36,7 @@ module RSlog
     end
 
     def _show_help
-      if options.delete('-h') || args.empty?
+      if @options.delete('-h') || @args.empty?
         puts _help_message
         return true
       end

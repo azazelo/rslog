@@ -25,6 +25,7 @@
           1,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -33,6 +34,9 @@
           null,
           1,
           1,
+          1,
+          null,
+          1,
           0,
           0,
           null,
@@ -48,15 +52,8 @@
           0,
           0,
           0,
-          null,
-          null,
-          null,
-          1,
-          0,
           0,
           null,
-          0,
-          0,
           null,
           null,
           1,
@@ -83,14 +80,16 @@
           null,
           null,
           1,
-          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           1,
           4,
           8,
-          null,
-          null,
-          1,
           4,
           3,
           3,
@@ -98,6 +97,10 @@
           null,
           null,
           1,
+          2,
+          null,
+          0,
+          0,
           null,
           null,
           1,
@@ -173,6 +176,8 @@
           null,
           null,
           1,
+          null,
+          1,
           2,
           null,
           1,
@@ -181,7 +186,7 @@
           null
         ]
       },
-      "/Users/andrey/projects/rslog/lib/rslog/parser.rb": {
+      "/Users/andrey/projects/rslog/lib/rslog/data_processing.rb": {
         "lines": [
           null,
           null,
@@ -232,6 +237,14 @@
           0,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/andrey/projects/rslog/lib/rslog/parser.rb": {
+        "lines": [
+          null,
+          null,
+          1,
           null,
           1,
           null,
@@ -426,7 +439,7 @@
           null
         ]
       },
-      "/Users/andrey/projects/rslog/spec/unit/parser_spec.rb": {
+      "/Users/andrey/projects/rslog/spec/unit/data_processing_spec.rb": {
         "lines": [
           null,
           null,
@@ -434,6 +447,33 @@
           null,
           1,
           2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/andrey/projects/rslog/spec/unit/parser_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           1,
           1,
@@ -465,7 +505,7 @@
           1,
           null,
           1,
-          3,
+          1,
           null,
           1,
           2,
@@ -481,6 +521,6 @@
         ]
       }
     },
-    "timestamp": 1622717652
+    "timestamp": 1622755354
   }
 }
