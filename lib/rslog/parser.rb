@@ -5,7 +5,7 @@ module RSlog
   #
   class DataProcessing
     attr_reader :result
-    
+
     def initialize(source, conf)
       @calc      = conf.fetch(:calc)      { proc }
       @separator = conf.fetch(:separator, ' ')
@@ -39,13 +39,13 @@ module RSlog
       @result.reverse!
       self
     end
-    
+
     private
-      # calculate total
-    def _total 
+
+    # calculate total
+    def _total
       @result.sum { |_url, visits_qty| visits_qty }
     end
-    
   end
 
   require 'forwardable'

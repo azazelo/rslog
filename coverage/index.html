@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-03T11:25:21+04:00">2021-06-03T11:25:21+04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-03T13:03:48+04:00">2021-06-03T13:03:48+04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  89.62%
+  89.56%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.34
+         1.48
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>183</b> relevant lines,
-    <span class="green"><b>164</b> lines covered</span> and
+    <b>182</b> relevant lines,
+    <span class="green"><b>163</b> lines covered</span> and
     <span class="red"><b>19</b> lines missed. </span>
     (<span class="yellow">
-  89.62%
+  89.56%
 </span>
 )
   </div>
@@ -95,22 +95,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d4baca927362f18bba6c69d4aa24ed2712666b65" class="src_link" title="lib/rslog/parser.rb">lib/rslog/parser.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">64</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">32</td>
+            <td class="cell--number">68</td>
+            <td class="cell--number">33</td>
+            <td class="cell--number">33</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.94</td>
+            <td class="cell--number">2.64</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf75d44a6c53f63bdb700dceeb58a042285dd08d" class="src_link" title="lib/rslog/presenter.rb">lib/rslog/presenter.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">52</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">27</td>
+            <td class="cell--number">51</td>
+            <td class="cell--number">25</td>
+            <td class="cell--number">25</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.22</td>
+            <td class="cell--number">1.24</td>
             
           </tr>
         
@@ -1659,8 +1659,8 @@
     
 
     <div class="t-line-summary">
-      <b>32</b> relevant lines.
-      <span class="green"><b>32</b> lines covered</span> and
+      <b>33</b> relevant lines.
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1722,7 +1722,7 @@
 
             
 
-            <code class="ruby">  # </code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -1744,29 +1744,29 @@
 
             
 
-            <code class="ruby">    attr_reader :calc, :separator, :source</code>
+            <code class="ruby">    attr_reader :result</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    attr_accessor :result, :total</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
             
 
             <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def initialize(source, conf)</code>
           </li>
         </div>
       
@@ -1777,7 +1777,7 @@
 
             
 
-            <code class="ruby">    def initialize(source, conf)</code>
+            <code class="ruby">      @calc      = conf.fetch(:calc)      { proc }</code>
           </li>
         </div>
       
@@ -1788,7 +1788,7 @@
 
             
 
-            <code class="ruby">      @calc      = conf.fetch(:calc)      { proc }</code>
+            <code class="ruby">      @separator = conf.fetch(:separator, &#39; &#39;)</code>
           </li>
         </div>
       
@@ -1799,18 +1799,18 @@
 
             
 
-            <code class="ruby">      @separator = conf.fetch(:separator, &#39; &#39;)</code>
+            <code class="ruby">      @result = Array(source)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="13">
+            
             
 
             
 
-            <code class="ruby">      @result = Array(source)</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1821,7 +1821,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1832,23 +1832,12 @@
 
             
 
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
             <code class="ruby">    # extract</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -1859,24 +1848,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="18">
+          <li class="covered" data-hits="6" data-linenumber="17">
             <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      @result = @result.map { |item| item.split(separator) }</code>
+            <code class="ruby">      @result = @result.map { |item| item.split(@separator) }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">      self</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1887,7 +1887,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1898,23 +1898,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # group</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
-            
-            
-
-            
-
-            <code class="ruby">    # group </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
+          <li class="covered" data-hits="1" data-linenumber="22">
             <span class="hits">1</span>
             
 
@@ -1925,7 +1914,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="24">
+          <li class="covered" data-hits="6" data-linenumber="23">
             <span class="hits">6</span>
             
 
@@ -1936,13 +1925,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="24">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">      self</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1953,7 +1953,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1964,23 +1964,12 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    # calculate</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
-            <code class="ruby">     # calculate</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -1991,7 +1980,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="30">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -2002,40 +1991,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="31">
+          <li class="covered" data-hits="6" data-linenumber="30">
             <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      @result = @result.map { |url, visits| [url, calc.call(visits)] }</code>
+            <code class="ruby">      @result = @result.map { |url, visits| [url, @calc.call(visits)] }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
-            
-
-            <code class="ruby">      # calculate total</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="33">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">      @total = @result.sum { |_url, visits| visits }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="34">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -2046,18 +2013,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="35">
+          <li class="covered" data-hits="6" data-linenumber="32">
             <span class="hits">6</span>
             
 
             
 
-            <code class="ruby">      @result = @result.map { |url, visits| [url, visits, (visits.to_f / @total)] }</code>
+            <code class="ruby">      @result = @result.map { |url, visits_qty| [url, visits_qty, (visits_qty.to_f / _total)] }</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
+          <li class="covered" data-hits="1" data-linenumber="33">
             <span class="hits">1</span>
             
 
@@ -2068,7 +2035,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="37">
+          <li class="never" data-hits="" data-linenumber="34">
             
             
 
@@ -2079,7 +2046,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="never" data-hits="" data-linenumber="35">
             
             
 
@@ -2090,7 +2057,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="never" data-hits="" data-linenumber="36">
             
             
 
@@ -2101,7 +2068,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="40">
+          <li class="covered" data-hits="1" data-linenumber="37">
             <span class="hits">1</span>
             
 
@@ -2112,7 +2079,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="41">
+          <li class="covered" data-hits="6" data-linenumber="38">
             <span class="hits">6</span>
             
 
@@ -2123,7 +2090,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="39">
             <span class="hits">1</span>
             
 
@@ -2134,7 +2101,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="43">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
@@ -2145,7 +2112,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="41">
             
             
 
@@ -2156,7 +2123,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -2167,13 +2134,46 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="43">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
             
 
-            <code class="ruby">  end  </code>
+            <code class="ruby">      # calculate total</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def _total </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="30" data-linenumber="46">
+            <span class="hits">30</span>
+            
+
+            
+
+            <code class="ruby">      @result.sum { |_url, visits_qty| visits_qty }</code>
           </li>
         </div>
       
@@ -2184,18 +2184,18 @@
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="48">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="48">
+            
             
 
             
 
-            <code class="ruby">  require &#39;forwardable&#39;</code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -2206,7 +2206,7 @@
 
             
 
-            <code class="ruby">  # Class to parse data</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -2217,7 +2217,7 @@
 
             
 
-            <code class="ruby">  #</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2228,29 +2228,29 @@
 
             
 
-            <code class="ruby">  class Parser</code>
+            <code class="ruby">  require &#39;forwardable&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="52">
+            
             
 
             
 
-            <code class="ruby">    attr_reader :data_processing</code>
+            <code class="ruby">  # Class to parse data</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="53">
+            
             
 
             
 
-            <code class="ruby">    extend Forwardable</code>
+            <code class="ruby">  #</code>
           </li>
         </div>
       
@@ -2261,12 +2261,23 @@
 
             
 
-            <code class="ruby">    def_delegators :@data_processing, :extract, :group, :calculate, :order</code>
+            <code class="ruby">  class Parser</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    attr_reader :data_processing</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="56">
             
             
 
@@ -2277,35 +2288,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="56">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    def initialize(source, conf)</code>
-          </li>
-        </div>
-      
-        <div>
           <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      @data_processing = DataProcessing.new(source, conf)</code>
+            <code class="ruby">    extend Forwardable</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="58">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    end</code>
+            
+
+            <code class="ruby">    def_delegators :@data_processing, :extract, :group, :calculate, :order</code>
           </li>
         </div>
       
@@ -2327,7 +2327,7 @@
 
             
 
-            <code class="ruby">    def execute</code>
+            <code class="ruby">    def initialize(source, conf)</code>
           </li>
         </div>
       
@@ -2338,7 +2338,7 @@
 
             
 
-            <code class="ruby">      data_processing.extract.group.calculate.order.result</code>
+            <code class="ruby">      @data_processing = DataProcessing.new(source, conf)</code>
           </li>
         </div>
       
@@ -2360,12 +2360,56 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def execute</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      data_processing.extract.group.calculate.order.result</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="68">
             
             
 
@@ -2394,8 +2438,8 @@
     
 
     <div class="t-line-summary">
-      <b>27</b> relevant lines.
-      <span class="green"><b>27</b> lines covered</span> and
+      <b>25</b> relevant lines.
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2561,13 +2605,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="15">
+            
             
 
             
 
-            <code class="ruby">    attr_reader :source, :title, :format_title, :format_cell, :columns,</code>
+            <code class="ruby">#    attr_reader :source, :title, :format_title, :format_cell, :columns,</code>
           </li>
         </div>
       
@@ -2578,7 +2622,7 @@
 
             
 
-            <code class="ruby">                :suffix, :head, :head_titles</code>
+            <code class="ruby">#                :suffix, :head, :head_titles</code>
           </li>
         </div>
       
@@ -2622,7 +2666,7 @@
 
             
 
-            <code class="ruby">      @type          = conf.fetch(:type, :table)</code>
+            <code class="ruby">      @type        = conf.fetch(:type, :table)</code>
           </li>
         </div>
       
@@ -2633,7 +2677,7 @@
 
             
 
-            <code class="ruby">      @title         = conf.fetch(:title, &#39;Stat Pages&#39;)</code>
+            <code class="ruby">      @title       = conf.fetch(:title, &#39;Stat Pages&#39;)</code>
           </li>
         </div>
       
@@ -2644,7 +2688,7 @@
 
             
 
-            <code class="ruby">      @format_title  = conf.fetch(:format_string, &#39;%-20s&#39;)</code>
+            <code class="ruby">      @formatter   = conf.fetch(:formatter, &#39;%-20s&#39;)</code>
           </li>
         </div>
       
@@ -2655,7 +2699,7 @@
 
             
 
-            <code class="ruby">      @format_cell   = conf.fetch(:format_cell, &#39;%-20s&#39;)</code>
+            <code class="ruby">      @suffix      = conf.fetch(:suffix, &#39;Visits&#39;)</code>
           </li>
         </div>
       
@@ -2666,7 +2710,7 @@
 
             
 
-            <code class="ruby">      @suffix        = conf.fetch(:suffix, &#39;Visits&#39;)</code>
+            <code class="ruby">      @columns     = conf.fetch(:columns, @source&amp;.first&amp;.size)</code>
           </li>
         </div>
       
@@ -2677,18 +2721,18 @@
 
             
 
-            <code class="ruby">      @columns       = conf.fetch(:columns, @source&amp;.first&amp;.size)</code>
+            <code class="ruby">      @head_titles = conf.fetch(:head_titles, Array.new(@columns, &#39;title&#39;))</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="26">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="26">
+            
             
 
             
 
-            <code class="ruby">      @head_titles   = conf.fetch(:head_titles, Array.new(@columns, &#39;title&#39;))</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2699,23 +2743,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -2726,13 +2759,24 @@
         </div>
       
         <div>
+          <li class="covered" data-hits="1" data-linenumber="29">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      puts @title</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="covered" data-hits="1" data-linenumber="30">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      puts title</code>
+            <code class="ruby">      puts _horizontal_line</code>
           </li>
         </div>
       
@@ -2743,7 +2787,7 @@
 
             
 
-            <code class="ruby">      puts _horizontal_line</code>
+            <code class="ruby">      puts format(@formatter * @columns, *@head_titles)</code>
           </li>
         </div>
       
@@ -2754,7 +2798,7 @@
 
             
 
-            <code class="ruby">      puts format(format_title * columns, *head_titles)</code>
+            <code class="ruby">      puts _horizontal_line</code>
           </li>
         </div>
       
@@ -2765,7 +2809,7 @@
 
             
 
-            <code class="ruby">      puts _horizontal_line</code>
+            <code class="ruby">      puts _formatted</code>
           </li>
         </div>
       
@@ -2776,7 +2820,7 @@
 
             
 
-            <code class="ruby">      puts _formatted</code>
+            <code class="ruby">      puts _horizontal_line</code>
           </li>
         </div>
       
@@ -2787,18 +2831,18 @@
 
             
 
-            <code class="ruby">      puts _horizontal_line</code>
+            <code class="ruby">      puts</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="36">
+            
             
 
             
 
-            <code class="ruby">      puts</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2809,23 +2853,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -2836,7 +2869,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="never" data-hits="" data-linenumber="39">
             
             
 
@@ -2847,7 +2880,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="40">
             <span class="hits">1</span>
             
 
@@ -2858,13 +2891,24 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="42">
+          <li class="covered" data-hits="3" data-linenumber="41">
             <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">      &#39;-&#39; * 20 * columns</code>
+            <code class="ruby">      &#39;-&#39; * 20 * @columns</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -2875,23 +2919,12 @@
 
             
 
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="44">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="45">
+          <li class="covered" data-hits="1" data-linenumber="44">
             <span class="hits">1</span>
             
 
@@ -2902,18 +2935,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="46">
+          <li class="covered" data-hits="1" data-linenumber="45">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      source.map do |row|</code>
+            <code class="ruby">      @source.map do |row|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="47">
+          <li class="covered" data-hits="3" data-linenumber="46">
             <span class="hits">3</span>
             
 
@@ -2924,18 +2957,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="48">
+          <li class="covered" data-hits="3" data-linenumber="47">
             <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">        format(format_cell * columns, *row).to_s</code>
+            <code class="ruby">        format(@formatter * @columns, *row).to_s</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -2946,7 +2979,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -2957,7 +2990,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
@@ -2968,7 +3001,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="51">
             
             
 
