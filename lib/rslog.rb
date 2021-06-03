@@ -33,7 +33,7 @@ module RSlog
     end
 
     def self.file_names
-      file_names = RSlog::ArgsHandler.handle(ARGV)
+      file_names = RSlog::ArgsHandler.new(ARGV).handle
       return file_names if file_names.all? { |file_name| File.file?(file_name) }
 
       puts 'There is no file names given. Check input.'
@@ -41,18 +41,16 @@ module RSlog
     end
 
     def self.config_sets
-      [{ title:         %(List of webpages with most page views ordered from most pages views to less page views:),
-         format_string: '%-20s %3d',
-         calc:          proc { |visits| visits.size } },
+      [{ title:           %(List of webpages with most page views ordered from most pages views to less page views:),
+         head_titles:     %w[Url Visits Average],
+         calc:            proc { |visits| visits.size },
+         total_by_column: 1 },
 
-       { title:         'List of webpages with most unique page views also ordered:',
-         format_string: '%-20s %3d',
-         suffix:        'unique views',
-         calc:          proc { |visits| Set.new(visits).size } },
-
-       { title:  'Average visits sorted:',
-         suffix: 'average visits',
-         calc:   proc { |visits| Set.new(visits).size.to_f / visits.size } }]
+       { title:           'List of webpages with most unique page views also ordered:',
+         head_titles:     %w[Url Unique\ views Average],
+         suffix:          'Unique views',
+         calc:            proc { |visits| Set.new(visits).size },
+         total_by_column: 1 }]
     end
   end
 end

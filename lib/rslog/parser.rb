@@ -1,24 +1,68 @@
 # frozen_string_literal: true
 
 module RSlog
-  # Class to parse data
+  # Class to hold data_processing methods
   #
-  class Parser
-    attr_reader :calc, :separator, :source
-
+  class DataProcessing
+    attr_reader :result
+    
     def initialize(source, conf)
       @calc      = conf.fetch(:calc)      { proc }
       @separator = conf.fetch(:separator, ' ')
-      @source = source
+      @result = Array(source)
+    end
+
+    # extract
+    def extract
+      @result = @result.map { |item| item.split(@separator) }
+      self
+    end
+
+    # group
+    def group
+      @result = @result.group_by { |url, _visits| url }.to_a
+      self
+    end
+
+    # calculate
+    def calculate
+      # calculate visits
+      @result = @result.map { |url, visits| [url, @calc.call(visits)] }
+      # calculate average
+      @result = @result.map { |url, visits_qty| [url, visits_qty, (visits_qty.to_f / _total)] }
+      self
+    end
+
+    # sort
+    def order
+      @result = @result.sort_by { |_url, visits_by_page| visits_by_page }
+      @result.reverse!
+      self
+    end
+    
+    private
+      # calculate total
+    def _total 
+      @result.sum { |_url, visits_qty| visits_qty }
+    end
+    
+  end
+
+  require 'forwardable'
+  # Class to parse data
+  #
+  class Parser
+    attr_reader :data_processing
+
+    extend Forwardable
+    def_delegators :@data_processing, :extract, :group, :calculate, :order
+
+    def initialize(source, conf)
+      @data_processing = DataProcessing.new(source, conf)
     end
 
     def execute
-      Array(source)
-        .map { |item| item.split(separator) } # extract, returns Array
-        .group_by { |page_name, _visits| page_name }                # group, returns Hash
-        .map { |page_name, visits| [page_name, calc.call(visits)] } # calculate, returns Array
-        .sort_by { |_page_name, visits_by_page| visits_by_page }    # sort, returns Array
-        .reverse
+      data_processing.extract.group.calculate.order.result
     end
   end
 end

@@ -12,26 +12,40 @@ module RSlog
   #   "/help_page/1           1 visits" ]
   #
   class Presenter
-    attr_reader :title, :format_string, :suffix, :source
+    attr_reader :source, :title, :format_title, :format_cell, :columns,
+                :suffix, :head, :head_titles
 
     def initialize(source, conf)
       @source = source
-      @title            = conf.fetch(:title, 'Stat Pages')
-      @format_string    = conf.fetch(:format_string, '%-20s %5.2f')
-      @suffix           = conf.fetch(:suffix, 'visits')
+      @type          = conf.fetch(:type, :table)
+      @title         = conf.fetch(:title, 'Stat Pages')
+      @format_title  = conf.fetch(:format_string, '%-20s')
+      @format_cell   = conf.fetch(:format_cell, '%-20s')
+      @suffix        = conf.fetch(:suffix, 'Visits')
+      @columns       = conf.fetch(:columns, @source&.first&.size)
+      @head_titles   = conf.fetch(:head_titles, Array.new(@columns, 'title'))
     end
 
     def present
       puts title
+      puts _horizontal_line
+      puts format(format_title * columns, *head_titles)
+      puts _horizontal_line
       puts _formatted
+      puts _horizontal_line
       puts
     end
 
     private
 
+    def _horizontal_line
+      '-' * 20 * columns
+    end
+
     def _formatted
       source.map do |row|
-        "#{format(format_string, *row)} #{suffix}"
+        row = row.map(&:to_s)
+        format(format_cell * columns, *row).to_s
       end
     end
   end

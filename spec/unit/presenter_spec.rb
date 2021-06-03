@@ -7,7 +7,7 @@ describe RSlog::Presenter do
 
   it 'output result' do
     expect { presenter.present }
-      .to output(%r{Title\s/index})
+      .to output(/Title(.|\n)*index/)
       .to_stdout_from_any_process
   end
 end

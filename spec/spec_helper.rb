@@ -27,10 +27,9 @@ RSpec.configure do |config|
 end
 
 def conf
-  { title:         'Title',
-    format_string: '%-20s %3d',
-    suffix:        'visits',
-    calc:          proc { |visits| visits.size } }
+  { title:  'Title',
+    suffix: 'visits',
+    calc:   proc { |visits| visits.size } }
 end
 
 def source_data
@@ -42,17 +41,8 @@ def source_data
 end
 
 def sorted_data
-  [['/about', 1], ['/about/2', 1], ['/home', 1], ['/contact', 1], ['/help_page/1', 1]]
-end
-
-def extracted_data
-  [
-    ['/help_page/1', '126.318.035.038'],
-    ['/contact', '184.123.665.067'],
-    ['/home', '184.123.665.067'],
-    ['/about/2', '444.701.448.104'],
-    ['/about', '722.247.931.582']
-  ]
+  #  [['/about', 1], ['/about/2', 1], ['/home', 1], ['/contact', 1], ['/help_page/1', 1]]
+  [['/about', 1, 0.2], ['/about/2', 1, 0.2], ['/home', 1, 0.2], ['/contact', 1, 0.2], ['/help_page/1', 1, 0.2]]
 end
 
 def valid_data
@@ -76,52 +66,10 @@ def invalid_ips
   }
 end
 
-def valid_ips
-  {
-    '/help_page/1' => [['/help_page/1', '126.125.035.038']],
-    '/contact' => [['/contact', '184.123.100.067']],
-    '/home' => [['/home', '184.123.100.067']],
-    '/about/2' => [['/about/2', '100.100.100.104']],
-    '/about' => [['/about', '100.247.100.100']]
-
-  }
-end
-
-def arr
-  [
-    ['/index', '1.1.1.1'],
-    ['/index', '2.2.2.2'],
-    ['/home', '2.2.2.2'],
-    ['/about', '3.3.3.3']
-  ]
-end
-
-def grouped_hash
-  {
-    '/index' => [['/index', '1.1.1.1'], ['/index', '2.2.2.2']],
-    '/home' => [['/home', '2.2.2.2']],
-    '/about' => [['/about', '3.3.3.3']]
-  }
-end
-
-def calculated_hash
-  [
-    ['/index', 2],
-    ['/home', 1],
-    ['/about', 1]
-  ]
-end
-
 def sorted_hash
   [
-    ['/index', 2],
-    ['/about', 1],
-    ['/home', 1]
+    ['/index', '2'],
+    ['/about', '1'],
+    ['/home', '1']
   ]
-end
-
-def formatted_data
-  ['/index                 2 visits',
-   '/about                 1 visits',
-   '/home                  1 visits']
 end
