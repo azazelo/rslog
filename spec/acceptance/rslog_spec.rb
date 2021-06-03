@@ -9,13 +9,13 @@
 #       /index 1 unique vies
 #       /home 1 unique views
 #       /about 1 unique views'
-# 2. As a user I want to input in command line 'rslog --version' and get output#{' '}
-#    0.0.1
-# 3. As a user I want to input in command line 'rslog --help' and get output#{' '}
+# 2. As a user I want to input in command line 'rslog -v' and get output
+#    Version 0.0.1
+# 3. As a user I want to input in command line 'rslog --help' and get output
 #  Usage: rslog FILENAME
-#    -v, --version                    Show version and exit
-#    -h, --help                       Prints this message and exit
-# 5. As a user I want to input in command line 'rslog empty.log' and get output#{' '}
+#    -v, Show version and exit
+#    -h, Prints this message and exit
+# 5. As a user I want to input in command line 'rslog empty.log' and get
 #    Empty file!
 # 6. As a user I want to input in command line 'rslog non_text.log' and get output#{' '}
 #    (not yet)
@@ -54,23 +54,8 @@ describe RSlog do
   context 'when ip in given file are valid' do
     it 'prints stat for file' do
       expect { system %(./bin/rslog ./spec/fixtures/files/good.log) }
-        .to output(a_string_including('index'))
+        .to output(a_string_including('All IPs are valid'))
         .to_stdout_from_any_process
     end
   end
 end
-
-# describe RSlog do
-#  context 'create appropriate objects' do
-#    let(:container) { build(:container) }
-#    let(:worker) { Worker.new(container) }
-#    it('creates Container') { expect(container).to be_instance_of(Container) }
-#    it('run') {
-#      expect { RSlog.run }.to output(/No file/).to_stdout_from_any_process
-#    }
-#
-#    it 'process_all' do
-#      expect { worker.process_all }.to output(/No file/).to_stdout_from_any_process
-#    end
-#  end
-# end
