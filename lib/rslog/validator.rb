@@ -24,7 +24,7 @@ module RSlog
     end
 
     private
-    
+
     def _valid?(source)
       return :valid if source.all? TEMPLATES[:ip]
 

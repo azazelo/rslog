@@ -6,12 +6,12 @@ module RSlog
   # returns Array of file names
   #
   module ArgsHandler
-#    attr_reader :args, :options
-#
-#    def initialize(args)
-#      @args = args
-#      @options = @args.select { |el| el =~ /^-/ }
-#    end
+    #    attr_reader :args, :options
+    #
+    #    def initialize(args)
+    #      @args = args
+    #      @options = @args.select { |el| el =~ /^-/ }
+    #    end
 
     def file_names_from_args(args)
       @args = args

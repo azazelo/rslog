@@ -9,14 +9,14 @@ require_relative 'rslog/presenter'
 require 'set'
 
 module RSlog
-  VERSION = '0.0.16'
+  VERSION = '0.0.17'
 
   # Module to hold main process
   #
   module Main
     extend RSlog::ArgsHandler
     extend RSlog::Validator
-    
+
     def self.run
       file_names_from_args(ARGV).each do |file_name|
         puts "Statistics for file #{file_name}"

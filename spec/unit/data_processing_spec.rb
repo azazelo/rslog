@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe RSlog::DataProcessing do
-  let(:data_processing) { RSlog::DataProcessing.new(source_data, conf)}
+  let(:data_processing) { RSlog::DataProcessing.new(source_data, conf) }
 
   it 'extract.group.calculate.order.result' do
     expect(data_processing.extract.result).to eq(extracted_data)
