@@ -26,7 +26,6 @@ module RSlog
       @col_size    = conf.fetch(:col_size, 20)
       @title       = conf.fetch(:title, 'Stat Pages')
       @formatter   = conf.fetch(:formatter, "%-#{@col_size}s")
-      @suffix      = conf.fetch(:suffix, 'Visits')
       @columns     = conf.fetch(:columns, @source&.first&.size || 1)
       @head_titles = conf.fetch(:head_titles, Array.new(@columns, 'title'))
     end

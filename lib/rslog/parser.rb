@@ -29,7 +29,7 @@ module RSlog
       # calculate visits
       @result = @result.map { |url, visits| [url, @calc.call(visits)] }
       # calculate average
-      @result = @result.map { |url, visits_qty| [url, visits_qty, (visits_qty.to_f / _total)] }
+      # @result = @result.map { |url, visits_qty| [url, visits_qty, (visits_qty.to_f / _total)] }
       self
     end
 
