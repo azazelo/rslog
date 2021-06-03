@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative 'lib/rslog'
+
 Gem::Specification.new do |s|
   s.name        = 'rslog'
-  s.version     = '0.0.14'
+  s.version     = RSlog::VERSION
   s.required_ruby_version = '~> 2.6.0'
   s.executables << 'rslog'
   s.summary     = 'R(uby)S(tatistic)log'
@@ -11,17 +13,10 @@ Gem::Specification.new do |s|
   s.email       = 'a.eremeev@outlook.com'
   s.files       = %w[
     lib/rslog.rb
-    lib/rslog/container.rb
-    lib/rslog/worker.rb
-    lib/rslog/data_parser.rb
-    lib/rslog/extractor.rb
-    lib/rslog/input_parser.rb
-    lib/rslog/decorators.rb
-    lib/rslog/presenter.rb
+    lib/rslog/args_handler.rb
     lib/rslog/validator.rb
-    lib/rslog/opts.rb
-    lib/rslog/tools/array.rb
-    lib/rslog/tools/hash.rb
+    lib/rslog/parser.rb
+    lib/rslog/presenter.rb
   ]
   s.homepage    = 'https://rubygems.org/gems/rslog'
   s.license     = 'MIT'

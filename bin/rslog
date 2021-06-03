@@ -2,4 +2,4 @@
 # frozen_string_literal: true
 
 require_relative '../lib/rslog'
-RSlog.run
+RSlog::Main.run
