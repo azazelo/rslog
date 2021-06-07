@@ -46,7 +46,11 @@ module RSlog
        { title:       'List of webpages with most unique page views also ordered:',
          #          head_titles:     %w[Url Unique\ views Average],
          head_titles: %w[Url Unique\ views],
-         calc:        proc { |visits| Set.new(visits).size } }]
+         calc:        proc { |visits| Set.new(visits).size },
+         decortator: RSlog::Decorator.new(:str) }
+       
+         ]
+     
     end
   end
 end

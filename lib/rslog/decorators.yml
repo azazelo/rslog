@@ -8,3 +8,14 @@ utf:
   horizontal_border:  "\u2500"
   vertical_left_border:  "\u251c"
   vertical_right_border:  "\u2524"
+
+str:
+  left_up_corner: "|"
+  right_up_corner:  "|"
+  left_down_corner:  "|"
+  right_down_corner:  "|"
+  vertical_border:  "|"
+  horizontal_border:  "-"
+  vertical_left_border:  "|"
+  vertical_right_border:  "|"
+  
