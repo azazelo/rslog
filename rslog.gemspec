@@ -15,7 +15,10 @@ Gem::Specification.new do |s|
     lib/rslog.rb
     lib/rslog/args_handler.rb
     lib/rslog/validator.rb
+    lib/rslog/data_processing.rb
     lib/rslog/parser.rb
+    lib/rslog/decorators.yml
+    lib/rslog/decorator.rb
     lib/rslog/presenter.rb
   ]
   s.homepage    = 'https://rubygems.org/gems/rslog'

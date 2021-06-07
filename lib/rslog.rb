@@ -10,7 +10,7 @@ require_relative 'rslog/presenter'
 require 'set'
 
 module RSlog
-  VERSION = '0.0.18'
+  VERSION = '0.0.19'
 
   # Module to hold main process
   #
