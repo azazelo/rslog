@@ -49,7 +49,7 @@ module RSlog
     def _horisontal_line
       @decorator.horizontal_border * @col_size * @columns
     end
-    
+
     def _formatted_head_titles
       format(@formatter * @columns, *@head_titles)
     end
@@ -57,9 +57,9 @@ module RSlog
     def _formatted_data
       @source.map do |row|
         row = row.map(&:to_s)
-        @decorator.vertical_border + 
-        format(@formatter * @columns, *row).to_s +  
-        @decorator.vertical_border
+        @decorator.vertical_border +
+          format(@formatter * @columns, *row).to_s +
+          @decorator.vertical_border
       end
     end
   end

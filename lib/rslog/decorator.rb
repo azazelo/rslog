@@ -6,11 +6,11 @@ module RSlog
   # Class for load borders for table
   #
   class Decorator
-    FILE_PATH = "lib/rslog/decorators.yml"
-    
+    FILE_PATH = 'lib/rslog/decorators.yml'
+
     attr_reader :decorators
-    
-    def initialize(coding=:utf)
+
+    def initialize(coding = :utf)
       @coding = String(coding)
       @decorators = YAML.load_file(FILE_PATH)[@coding]
       @decorators.each do |name, value|
