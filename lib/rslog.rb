@@ -31,7 +31,7 @@ module RSlog
     end
 
     def self._process(lines)
-      decorator = RSlog::Decorator.new(:str)
+      decorator = RSlog::Decorator.new(:utf)
       _config_sets.each do |conf|
         data_processing = RSlog::DataProcessing.new(lines, conf)
         parsed_data = RSlog::Parser.new(data_processing).parse
