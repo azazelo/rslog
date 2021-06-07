@@ -16,14 +16,15 @@
 
 ### 1. RSlog - main module - run the app
 
-  Validator to validate IPs  
+  ###Validator  
+    validate IPs  
    
-  Parser -  
-    extract  
-    group  
-    calculate  
-    order    
-  Presenter  
+  ###Parser -  
+    - extract  
+    - group  
+    - calculate  
+    - order    
+  ####Presenter  
     output result as table,  
     borders could be strings (|, -, +) or utf ancoded pseudo graphics  
    
