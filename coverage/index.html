@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-07T11:58:30+04:00">2021-06-07T11:58:30+04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-06-07T12:31:12+04:00">2021-06-07T12:31:12+04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  91.47%
+  91.12%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         1.32
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>211</b> relevant lines,
-    <span class="green"><b>193</b> lines covered</span> and
-    <span class="red"><b>18</b> lines missed. </span>
+    <b>214</b> relevant lines,
+    <span class="green"><b>195</b> lines covered</span> and
+    <span class="red"><b>19</b> lines missed. </span>
     (<span class="green">
-  91.47%
+  91.12%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b97c048d5460308d940a6d6ba88d918fbdb2d1e5" class="src_link" title="lib/rslog.rb">lib/rslog.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">55.56 %</td>
-            <td class="cell--number">52</td>
-            <td class="cell--number">27</td>
+            <td class="red strong cell--number t-file__coverage">53.57 %</td>
+            <td class="cell--number">53</td>
+            <td class="cell--number">28</td>
             <td class="cell--number">15</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">0.56</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">0.54</td>
             
           </tr>
         
@@ -128,11 +128,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf75d44a6c53f63bdb700dceeb58a042285dd08d" class="src_link" title="lib/rslog/presenter.rb">lib/rslog/presenter.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">66</td>
-            <td class="cell--number">33</td>
-            <td class="cell--number">33</td>
+            <td class="cell--number">70</td>
+            <td class="cell--number">35</td>
+            <td class="cell--number">35</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.18</td>
+            <td class="cell--number">1.17</td>
             
           </tr>
         
@@ -246,7 +246,7 @@
     <h3>lib/rslog.rb</h3>
     <h4>
       <span class="red">
-  55.56%
+  53.57%
 </span>
 
       lines covered
@@ -255,9 +255,9 @@
     
 
     <div class="t-line-summary">
-      <b>27</b> relevant lines.
+      <b>28</b> relevant lines.
       <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="red"><b>13</b> lines missed.</span>
     </div>
 
     
@@ -406,7 +406,7 @@
 
             
 
-            <code class="ruby">  VERSION = &#39;0.0.17&#39;</code>
+            <code class="ruby">  VERSION = &#39;0.0.19&#39;</code>
           </li>
         </div>
       
@@ -637,7 +637,7 @@
 
             
 
-            <code class="ruby">      _config_sets.each do |conf|</code>
+            <code class="ruby">      decorator = RSlog::Decorator.new(:utf)</code>
           </li>
         </div>
       
@@ -648,7 +648,7 @@
 
             
 
-            <code class="ruby">        data_processing = RSlog::DataProcessing.new(lines, conf)</code>
+            <code class="ruby">      _config_sets.each do |conf|</code>
           </li>
         </div>
       
@@ -659,7 +659,7 @@
 
             
 
-            <code class="ruby">        parsed_data = RSlog::Parser.new(data_processing).parse</code>
+            <code class="ruby">        data_processing = RSlog::DataProcessing.new(lines, conf)</code>
           </li>
         </div>
       
@@ -670,18 +670,18 @@
 
             
 
-            <code class="ruby">        RSlog::Presenter.new(parsed_data, conf).present</code>
+            <code class="ruby">        parsed_data = RSlog::Parser.new(data_processing).parse</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
+          <li class="missed" data-hits="0" data-linenumber="38">
             
             
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">        RSlog::Presenter.new(parsed_data, conf, decorator).present</code>
           </li>
         </div>
       
@@ -692,7 +692,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -703,12 +703,23 @@
 
             
 
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="41">
+          <li class="covered" data-hits="1" data-linenumber="42">
             <span class="hits">1</span>
             
 
@@ -719,7 +730,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="42">
+          <li class="missed" data-hits="0" data-linenumber="43">
             
             
 
@@ -730,7 +741,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -741,7 +752,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -752,7 +763,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="45">
+          <li class="missed" data-hits="0" data-linenumber="46">
             
             
 
@@ -763,7 +774,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="46">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -774,7 +785,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
@@ -785,7 +796,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -796,24 +807,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="49">
+          <li class="missed" data-hits="0" data-linenumber="50">
             
             
 
             
 
-            <code class="ruby">         calc:        proc { |visits| Set.new(visits).size } }]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
+            <code class="ruby">         calc:        proc { |visits| Set.new(visits).size } } ]</code>
           </li>
         </div>
       
@@ -824,12 +824,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -2391,7 +2402,7 @@
 
             
 
-            <code class="ruby">    FILE_PATH = &quot;lib/rslog/decorators.yml&quot;</code>
+            <code class="ruby">    FILE_PATH = &#39;lib/rslog/decorators.yml&#39;</code>
           </li>
         </div>
       
@@ -2402,7 +2413,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2424,7 +2435,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2435,7 +2446,7 @@
 
             
 
-            <code class="ruby">    def initialize(coding=:utf)</code>
+            <code class="ruby">    def initialize(coding = :utf)</code>
           </li>
         </div>
       
@@ -2775,8 +2786,8 @@
     
 
     <div class="t-line-summary">
-      <b>33</b> relevant lines.
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>35</b> relevant lines.
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2948,7 +2959,7 @@
 
             
 
-            <code class="ruby">    def initialize(source, conf)</code>
+            <code class="ruby">    def initialize(source, conf, decorator=_default_decorator)</code>
           </li>
         </div>
       
@@ -3025,7 +3036,7 @@
 
             
 
-            <code class="ruby">      @decorator   = conf.fetch(:decorator, RSlog::Decorator.new(:utf))</code>
+            <code class="ruby">      @decorator   = decorator</code>
           </li>
         </div>
       
@@ -3179,7 +3190,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -3190,7 +3201,7 @@
 
             
 
-            <code class="ruby">    def _top_border</code>
+            <code class="ruby">    def _default_decorator</code>
           </li>
         </div>
       
@@ -3201,7 +3212,7 @@
 
             
 
-            <code class="ruby">      @decorator.left_up_corner + _horisontal_line + @decorator.right_up_corner</code>
+            <code class="ruby">      RSlog::Decorator.new(:utf)      </code>
           </li>
         </div>
       
@@ -3234,7 +3245,7 @@
 
             
 
-            <code class="ruby">    def _middle_border</code>
+            <code class="ruby">    def _top_border</code>
           </li>
         </div>
       
@@ -3245,7 +3256,7 @@
 
             
 
-            <code class="ruby">      @decorator.vertical_left_border + _horisontal_line + @decorator.vertical_right_border</code>
+            <code class="ruby">      @decorator.left_up_corner + _horisontal_line + @decorator.right_up_corner</code>
           </li>
         </div>
       
@@ -3278,7 +3289,7 @@
 
             
 
-            <code class="ruby">    def _bottom_border</code>
+            <code class="ruby">    def _middle_border</code>
           </li>
         </div>
       
@@ -3289,7 +3300,7 @@
 
             
 
-            <code class="ruby">      @decorator.left_down_corner + _horisontal_line + @decorator.right_down_corner</code>
+            <code class="ruby">      @decorator.vertical_left_border + _horisontal_line + @decorator.vertical_right_border</code>
           </li>
         </div>
       
@@ -3322,18 +3333,18 @@
 
             
 
-            <code class="ruby">    def _horisontal_line</code>
+            <code class="ruby">    def _bottom_border</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="50">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      @decorator.horizontal_border * @col_size * @columns</code>
+            <code class="ruby">      @decorator.left_down_corner + _horisontal_line + @decorator.right_down_corner</code>
           </li>
         </div>
       
@@ -3355,7 +3366,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -3366,18 +3377,18 @@
 
             
 
-            <code class="ruby">    def _formatted_head_titles</code>
+            <code class="ruby">    def _horisontal_line</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="54">
+            <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">      format(@formatter * @columns, *@head_titles)</code>
+            <code class="ruby">      @decorator.horizontal_border * @col_size * @columns</code>
           </li>
         </div>
       
@@ -3410,7 +3421,7 @@
 
             
 
-            <code class="ruby">    def _formatted_data</code>
+            <code class="ruby">    def _formatted_head_titles</code>
           </li>
         </div>
       
@@ -3421,67 +3432,12 @@
 
             
 
-            <code class="ruby">      @source.map do |row|</code>
+            <code class="ruby">      format(@formatter * @columns, *@head_titles)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="59">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">        row = row.map(&amp;:to_s)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="60">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">        @decorator.vertical_border + </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="61">
-            
-            
-
-            
-
-            <code class="ruby">        format(@formatter * @columns, *row).to_s +  </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="62">
-            
-            
-
-            
-
-            <code class="ruby">        @decorator.vertical_border</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -3492,7 +3448,106 @@
         </div>
       
         <div>
+          <li class="never" data-hits="" data-linenumber="60">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="61">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def _formatted_data</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="62">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      @source.map do |row|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="63">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">        row = row.map(&amp;:to_s)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="64">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">        @decorator.vertical_border +</code>
+          </li>
+        </div>
+      
+        <div>
           <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">          format(@formatter * @columns, *row).to_s +</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">          @decorator.vertical_border</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="68">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
             
             
 
@@ -3503,7 +3558,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="70">
             
             
 
