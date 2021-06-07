@@ -7,7 +7,7 @@ module RSlog
     attr_reader :result
 
     def initialize(source, conf)
-      @calc      = conf.fetch(:calc)      { proc }
+      @calc      = conf.fetch(:calc) { proc }
       @separator = conf.fetch(:separator, ' ')
       @result = Array(source)
     end
