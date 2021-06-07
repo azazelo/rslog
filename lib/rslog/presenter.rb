@@ -12,7 +12,7 @@ module RSlog
   #   "/help_page/1           1 visits" ]
   #
   class Presenter
-    def initialize(source, conf, decorator=_default_decorator)
+    def initialize(source, conf, decorator = _default_decorator)
       @source = source
       @col_size    = conf.fetch(:col_size, 20)
       @title       = conf.fetch(:title, 'Stat Pages')
@@ -33,9 +33,9 @@ module RSlog
     end
 
     private
-    
+
     def _default_decorator
-      RSlog::Decorator.new(:utf)      
+      RSlog::Decorator.new(:utf)
     end
 
     def _top_border
