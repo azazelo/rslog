@@ -16,14 +16,17 @@
 
 ### 1. RSlog - main module - run the app
 
-  Validator to validate IPs
-  Parser - 
-    extract
-    group
-    calculate
-    sort
-  Presenter
- 
+  Validator to validate IPs  
+   
+  Parser -  
+    extract  
+    group  
+    calculate  
+    order    
+  Presenter  
+    output result as table,  
+    borders could be strings (|, -, +) or utf ancoded pseudo graphics  
+   
 ## Output:
   List of webpages with most page views ordered from most pages views to less page views  
     /home 90  
