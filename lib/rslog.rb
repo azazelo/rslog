@@ -31,10 +31,11 @@ module RSlog
     end
 
     def self._process(lines)
+      decorator = RSlog::Decorator.new(:str)
       _config_sets.each do |conf|
         data_processing = RSlog::DataProcessing.new(lines, conf)
         parsed_data = RSlog::Parser.new(data_processing).parse
-        RSlog::Presenter.new(parsed_data, conf).present
+        RSlog::Presenter.new(parsed_data, conf, decorator).present
       end
     end
 
@@ -46,11 +47,7 @@ module RSlog
        { title:       'List of webpages with most unique page views also ordered:',
          #          head_titles:     %w[Url Unique\ views Average],
          head_titles: %w[Url Unique\ views],
-         calc:        proc { |visits| Set.new(visits).size },
-         decortator: RSlog::Decorator.new(:str) }
-       
-         ]
-     
+         calc:        proc { |visits| Set.new(visits).size } } ]
     end
   end
 end
