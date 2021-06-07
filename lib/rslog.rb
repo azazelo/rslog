@@ -5,6 +5,7 @@ require_relative 'rslog/args_handler'
 require_relative 'rslog/validator'
 require_relative 'rslog/data_processing'
 require_relative 'rslog/parser'
+require_relative 'rslog/decorator'
 require_relative 'rslog/presenter'
 require 'set'
 

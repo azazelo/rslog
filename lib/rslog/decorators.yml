@@ -1,0 +1,10 @@
+---
+utf:
+  left_up_corner: "\u250c"
+  right_up_corner:  "\u2510"
+  left_down_corner:  "\u2514"
+  right_down_corner:  "\u2518"
+  vertical_border:  "\u2502"
+  horizontal_border:  "\u2500"
+  vertical_left_border:  "\u251c"
+  vertical_right_border:  "\u2524"

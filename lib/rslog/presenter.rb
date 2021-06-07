@@ -12,15 +12,6 @@ module RSlog
   #   "/help_page/1           1 visits" ]
   #
   class Presenter
-    LEFT_UP_CORNER =    "\u250c"
-    RIGHT_UP_CORNER =   "\u2510"
-    LEFT_DOWN_CORNER =  "\u2514"
-    RIGHT_DOWN_CORNER = "\u2518"
-    VERTICAL_BORDER =   "\u2502"
-    HORIZONTAL_BORDER = "\u2500"
-    VERTICAL_LEFT_BORDER = "\u251C"
-    VERTICAL_RIGHT_BORDER = "\u2524"
-
     def initialize(source, conf)
       @source = source
       @col_size    = conf.fetch(:col_size, 20)
@@ -28,12 +19,13 @@ module RSlog
       @formatter   = conf.fetch(:formatter, "%-#{@col_size}s")
       @columns     = conf.fetch(:columns, @source&.first&.size || 1)
       @head_titles = conf.fetch(:head_titles, Array.new(@columns, 'title'))
+      @decorator   = conf.fetch(:decorator, RSlog::Decorator.new(:utf))
     end
 
     def present
       puts @title
       puts _top_border
-      puts VERTICAL_BORDER + format(@formatter * @columns, *@head_titles) + VERTICAL_BORDER
+      puts @decorator.vertical_border + _formatted_head_titles + @decorator.vertical_border
       puts _middle_border
       puts _formatted_data
       puts _bottom_border
@@ -43,25 +35,31 @@ module RSlog
     private
 
     def _top_border
-      LEFT_UP_CORNER + _horisontal_line + RIGHT_UP_CORNER
+      @decorator.left_up_corner + _horisontal_line + @decorator.right_up_corner
     end
 
     def _middle_border
-      VERTICAL_LEFT_BORDER + _horisontal_line + VERTICAL_RIGHT_BORDER
+      @decorator.vertical_left_border + _horisontal_line + @decorator.vertical_right_border
     end
 
     def _bottom_border
-      LEFT_DOWN_CORNER + _horisontal_line + RIGHT_DOWN_CORNER
+      @decorator.left_down_corner + _horisontal_line + @decorator.right_down_corner
     end
 
     def _horisontal_line
-      HORIZONTAL_BORDER * @col_size * @columns
+      @decorator.horizontal_border * @col_size * @columns
+    end
+    
+    def _formatted_head_titles
+      format(@formatter * @columns, *@head_titles)
     end
 
     def _formatted_data
       @source.map do |row|
         row = row.map(&:to_s)
-        VERTICAL_BORDER + format(@formatter * @columns, *row).to_s + VERTICAL_BORDER
+        @decorator.vertical_border + 
+        format(@formatter * @columns, *row).to_s +  
+        @decorator.vertical_border
       end
     end
   end
